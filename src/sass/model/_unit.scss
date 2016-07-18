@@ -1,0 +1,75 @@
+@charset "UTF-8";
+//数字输入模块
+.pro-num{
+	display:inline-block;	
+	height:28px;
+	width:112px;
+	margin-right: 5px;
+	border:1px solid colors(gray);
+	background:colors(white);
+	span{
+		float:left;
+		width:16px;
+		height:16px;
+		padding:6px;
+		background-color:colors(light);
+		cursor:pointer;
+		&:hover{
+			background-color: darken(colors(light), 5%);
+		}
+		.i{
+			vertical-align: top;
+		}
+		&.disable{
+			background-color:colors(light);
+			.i{
+				opacity:.3;
+			}
+			cursor: not-allowed;
+		}
+	}
+	label{
+		float:left;
+		width:50px;
+		height: 28px;
+		line-height: 28px;
+		padding:0 2px;
+		border:1px solid colors(gray);
+		border-width:0 1px;
+		overflow: hidden;
+		box-shadow:0 2px 3px 0 darken(colors(light;,5%) inset);
+		input{
+			width: 100%;
+			height: 28px!important;
+			border:none;
+			outline: none;
+			background-color:transparent;
+			font-size: fonts(size) * 1.2;
+			text-align: center;
+			vertical-align: initial!important;
+			&::-webkit-inner-spin-button{
+				display: none;
+			}
+			&:focus{
+				color:colors(red);
+			}
+		}
+	}
+}
+
+//评星模块
+.star{
+	position:relative;
+	margin-right:5px;
+	@extend .i;
+	@include mysprite(star);
+	cursor:pointer;
+	.percent{
+		position:absolute;
+		left:0;
+		top:0;
+		@extend .i;
+		@include mysprite(star_hover);
+		cursor:pointer;
+	}
+}

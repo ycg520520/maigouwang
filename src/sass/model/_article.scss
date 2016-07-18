@@ -1,0 +1,124 @@
+@charset "UTF-8";
+//文章详情模块
+.article{
+	padding:18px 0;
+	&>.hd{
+		border-bottom:1px dotted colors(gray);
+		margin-bottom:20px;
+		padding-bottom:9px;		
+		.title{
+			margin-bottom:12px;			
+			line-height:1.5;
+			font-size: fonts(size) * 3.2;
+			font-family: fonts(family);			
+			color: colors(primary);
+			text-align:center;
+		}		
+	}
+	//文章基础信息
+	.base-info{
+		margin-bottom: 12px;
+		text-align:center;
+		strong{
+			color: colors(dark);
+			font-weight:normal;
+		}
+	}
+	//文章描述块
+	.describe{
+		position: relative;
+		min-height: 40px;
+		margin-bottom: 16px;
+		border: 1px solid colors(gray);		
+		padding-left:48px;
+		line-height: 1.5;
+		font-size: fonts(size) * 1.2;
+		background: colors(light);
+		&>.hd{
+			position: absolute;
+			top:0;
+			left:0;
+			width:48px;
+			height: 100%;
+			line-height: 100%;
+			text-align: center;
+			background:colors(gray);
+			display: table-cell;
+			vertical-align: middle;
+			&>.title{
+				position: absolute;
+				top:50%;
+				left:50%;
+				width: 32px;
+				height: 32px;
+				margin: -16px;
+				line-height:16px;
+				color:colors(white);
+				font-size: fonts(size) *  1.4;
+				font-family: fonts(family);
+			}
+		}
+		&>.bd{
+			padding: 12px;
+			text-indent: 2em;
+		}
+	}
+
+	&>.bd{
+		padding-bottom:20px;
+		line-height:1.5;
+		embed{
+			width:100%;
+			max-width:720px;
+			max-height:480px;
+		}
+		p{
+			margin-bottom:10px;
+			text-indent:2em;
+			line-height:2;
+			embed{
+				margin-left:-2em
+			}
+		}
+		img{width:80%!important;}
+		.r{
+			@include float(right);
+			margin:6px 0 6px 12px;
+		}
+		.l{
+			float:left;
+			margin:6px 12px 6px 0;
+		}
+		.artComments i{
+			width:16px;
+			height:16px;
+			margin-left:3px;
+			vertical-align:middle;
+			cursor:pointer;}
+	}
+
+	//文章页脚信息
+	.ft{
+		font-size: fonts(size) * 1.4;
+	}
+}
+
+//上下文块
+.context{
+	//列表上下文块
+	li{
+		line-height:30px;
+		font-size:fonts(size) * 1.4;
+		span{
+			font-size:fonts(size) * 1.2;
+			color:colors(dark);
+			margin-left:20px;
+		}
+		strong{color:colors(dark);}
+	}
+}
+
+//分享
+.share-32{
+	margin-bottom: 16px;
+}

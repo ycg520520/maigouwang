@@ -1,0 +1,1 @@
+new Swiper("#J_hotCommend",{pagination:".swiper-pagination",nextButton:".ift-next",prevButton:".ift-prev",slidesPerView:4,paginationClickable:!0,spaceBetween:"4%",autoHeight:!0,loop:!0}),new Swiper(".scroller",{scrollbar:".swiper-scrollbar",direction:"vertical",slidesPerView:"auto",mousewheelControl:!0,scrollbarHide:!1,freeMode:!0,resistanceRatio:0});

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+//栅格栏配置
+$is_percentage: true;
+$is_boxsizing: true;
+$grid_precentage_width: 80%;
+$container:".row"; //包裹类
+$gridname:".col"; //设置栅格栏类名
+$grid_width: 960px;
+$def_gutter: 0px; //槽间距
+$columns: 24;
+@include auto_grids; //自动创建栅格类

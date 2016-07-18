@@ -1,0 +1,30 @@
+@charset "UTF-8";
+//tabs切换
+.tabs{
+	&>.hd{
+		position: relative;
+		height: 48px;
+		line-height: 48px;
+		border-bottom: 1px solid colors(gray);
+		li{
+			font-size: fonts(size) * 2.4;
+			@include float;
+			margin-right:24px;
+			cursor: pointer;
+			&.active,&:hover{
+				color: colors(auxiliary);
+			}
+		}
+		.modify{
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 96px;
+			height: 3px;
+			background-color:colors(auxiliary);
+		}
+	}
+	&>.bd{
+
+	}
+}

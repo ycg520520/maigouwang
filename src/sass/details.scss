@@ -1,0 +1,371 @@
+@import "config";
+// 产品基础信息
+.pro-intro{
+	&>.hd{
+		.title{
+			font-size: fonts(size) * 2.4;
+			font-weight: normal;
+			height: 32px;
+			line-height: 32px;
+			@include ellipsis;
+		}		
+		.time{
+			@include float(right);
+			font-size: fonts(size) * 1.2;
+			text-align: right;
+			line-height: 1.25;
+			margin-left: 16px;
+			color:colors(dark);
+		}
+	}
+	&>.bd{
+		margin-left: 432px;
+	}
+	// 画廊
+	@at-root .gallery{
+		@include float;
+		width: 400px;
+		margin-left: -432px;
+		&>.bd{
+			position: relative;
+			height: 280px;
+			margin-bottom: 8px;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.zoom{
+			position: absolute;
+			bottom:0;
+			right: 0;
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			background-color: rgba(colors(white), .5);
+			text-align: center;
+			.ift-search{
+				color: colors(white);
+			}
+		}
+		.ift-prev,.ift-next{
+			position: absolute;
+			top: 50%;
+			background-color: rgba(colors(black), .5);
+			color: colors(white);
+			font-size: fonts(size) * 1.6;
+			padding: 4px 2px;
+			margin-top: - 12px;
+			cursor: pointer;
+		}
+		.ift-prev{
+			left: 0;
+		}
+		.ift-next{
+			right: 0;
+		}
+		&>.hd{
+			height: 64px;
+			overflow: hidden;
+			li{
+				@include float;
+				width: 99px;
+				margin-right: 1px;
+				background-color: colors(black);
+				&.active{
+					img{
+						@include opacity(100);
+					}
+				}
+				img{
+					@include opacity(50);
+					width: 100%;
+				}
+			}
+		}
+	}
+	.main{
+		@include float;
+		width: 100%;
+		* {
+			vertical-align: middle;
+		}
+		.col2{
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			border-bottom: 1px dotted colors(gray);
+			.attr{
+				width: 50%;
+				@include float;
+				font-size: fonts(size) * 1.4;
+				&>dt,&>dd{
+					height: 30px;
+					line-height: 30px;
+				}
+			}
+		}
+		.attr{
+			font-size: fonts(size) * 1.4;
+			&>dt{
+				@include float;
+				color: colors(dark);
+				margin-right: 4px;
+			}
+			&>dt,&>dd{
+				height:40px;
+				line-height:40px;
+			}
+			
+		}
+		.opt{
+			margin: 16px 0;
+			font-size: fonts(size) * 1.4;
+		}
+		@at-root{
+			.tips-attr{
+				display: inline-block;
+				position: relative;
+				z-index: 2;
+				&:after,&:before{
+					position: absolute;
+					left:0;
+					top: -2px;
+					@include triangle(bottom,7px,lighten(colors(orange), 35%));
+				}
+				&:after{
+					top:-3px;
+					@include triangle(bottom,7px,lighten(colors(orange), 49%));
+				}
+				&:hover{
+					&>.bd{
+						display: block;
+					}
+				}
+				.tips-title{
+					font-weight: normal;
+					margin-bottom: 8px;
+				}
+				&>.bd{
+					display: none;
+					@extend %tips;
+					position: absolute;
+					left: -16px;
+					bottom: 32px;
+					width: 300px;
+					color: colors(darker);
+					box-shadow: 0 0 8px rgba(colors(black),.2);
+					dl{
+						padding-left: 40px;
+						font-size: fonts(size) * 1.2;
+					}
+					dt{
+						@include float;
+						margin-left: -40px;
+						color: colors(dark);
+					}
+					dt,dd{
+						line-height:1.5;
+					}
+					dd{
+						margin-bottom: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 产品详细展示
+.pro-details{
+	line-height: 1.5;
+	p{
+		margin-bottom: 1rem;
+		text-align: justify;
+		text-justify: auto;
+		text-indent: 2rem;
+	}
+	.bd{
+		img{
+			width:640px;
+		}
+		img+img{
+			margin-top: 24px;
+		}
+	}
+}
+
+// 商家
+.seller{
+	padding: 16px;
+	background-color: colors(light);
+	
+	// 商家头像
+	.figure{
+		padding-left: 64px;
+		.thumbnail{
+			@include float;
+			width: 56px;
+			height: 56px;
+			margin-left: -64px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.figcaption{
+			padding: 4px 0;
+			line-height: 24px;
+			font-size: fonts(size) * 1.2;
+		}
+		.title{
+			height: 24px;
+			// font-weight: normal;
+			font-size: fonts(size) * 1.8;
+		}
+		[class*="ift-"]{
+			font-size: fonts(size) * 1.2;
+		}
+	}
+
+	// 商家标题头样式
+	.box-center{
+		&>.hd{
+			height: 12px;
+			margin: 0 auto 16px;
+			&>.title{
+				display:inline-block;
+				height:24px;
+				line-height: 24px;
+				padding: 0 8px;
+				margin-bottom: -12px;
+				font-size: fonts(size) * 1.2;
+				font-weight: normal;
+				color: colors(dark);
+				background-color: colors(light);
+			}
+		}
+		&>.bd{
+			font-size: fonts(size) * 1.2;
+		}
+	}
+	
+	// 商家联系方式
+	.contact{
+		height: 40px;
+		margin-bottom: 8px;
+		&>.item{
+			@include float;
+			width:25%;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+			&-drop{
+				font-size: fonts(size) * 1.2;
+				&:after,&:before{
+					display:none;
+					position: absolute;
+					left:50%;
+					top:-8px;
+					margin-left: -7px;
+					@include triangle(bottom);
+				}
+				&:after{
+					top:-9px;
+					border-top-color:colors(white);
+				}
+			}
+			&:hover{
+				&:after,&:before{
+					display: block;
+				}
+				&>.bd{
+					visibility:visible;
+				}
+			}
+			&>.bd{
+				visibility:hidden;
+				position: absolute;
+				width:114px;
+				height: 138px;
+				bottom:48px;
+				right:0;
+				border:1px solid colors(gray);
+				background-color: colors(white);
+				box-shadow: 0 0 5px rgba(colors(black),.3);
+				overflow: hidden;
+				border-radius:3px;
+				color: colors(dark);
+			}
+			.tel{
+				display:inline-block;
+				width:40px;
+				height: 40px;
+				position: relative;
+				.ift-phone{
+					position: relative;
+					z-index: 1;
+				}
+				&:hover{
+					z-index: 1;
+					.txt{
+						visibility:visible;
+						padding-right:16px;
+						width: auto;
+					}
+				}
+			}
+			.txt{
+				visibility:hidden;
+				position: absolute;
+				top: 0;
+				left:0;
+				padding: 0 0 0 40px;
+				width: 0;
+				height: 40px;
+				line-height: 40px;
+				font-size: fonts(size) * 2.4;
+				color:colors(white);
+				white-space: nowrap;
+				border-radius:20px;
+				background-color: colors(red);
+				overflow: hidden;
+				// box-shadow:0 0 5px rgba(0, 0, 0, .3);
+				transition:.3s ease-in;
+			}
+		}
+		[class*="ift-"]{
+			display:inline-block;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			color: colors(white);
+			font-size: fonts(size) * 2.4;
+			border-radius: 50%;
+			vertical-align: top;
+		}
+
+		.ift-qq{
+			background-color: colors(green);
+		}
+		.ift-weixin{
+			background-color: colors(blue);
+		}
+		.ift-phone{
+			background-color: colors(red);
+		}
+		.ift-wangwang{
+			background-color: colors(blue);
+		}
+	}
+
+	.address{
+		&>.bd{
+			height: 40px;
+			margin-bottom: 8px;
+			line-height: 20px;
+			overflow: hidden;
+		}
+	}
+}
+
+
+@import "model/comments";

@@ -1,0 +1,9 @@
+# 这是git忽略列表，上次git时忽略掉一下设置
+*~
+.DS_Store
+.idea
+*.zip
+.git
+.sass-cache
+node_modules/*
+# dest/*

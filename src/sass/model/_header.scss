@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.header{
+	@include attrToRem(padding-top,24);
+	background-color: colors(white);
+	.aside{
+		@include float(right);
+		&>.item{
+			@include float;
+			@include attrToRem(margin-left,16);
+			font-size: fonts(size) * 1.4;
+		}
+		a{
+			color:colors(dark);
+		}
+	}
+	.ift-advise, .ift-user{
+		display:block;
+		text-align: center;
+		font-size: fonts(size) * 4;
+		color: colors(auxiliary);
+	}
+	//网站logo
+	@at-root .logo{
+		float:left;
+		display:block;
+		@include attrToRem(width,336);
+		@include attrToRem(height,64);
+		.figuire{
+			float:left;
+		}
+		.slogo{
+			@include attrToRem(height,64);
+			@include attrToRem(line-height,64);
+			@include attrToRem(margin-left,16);
+			float:left;
+			letter-spacing: 2px;
+			color: colors(primary);
+		}
+	  [class^="ift-"]{
+	    font-size: fonts(size) * 6.4;
+	    color:colors(primary);
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    -webkit-text-stroke-width: none;
+	  }
+	}
+	@at-root .nav-bar{
+		position: relative;
+		z-index: 1;
+		@include attrToRem(height,40);
+		@include attrToRem(margin-top,24);
+		background-color: colors(primary);
+		color: colors(white);
+		a{
+			color: colors(white);
+		}
+		@at-root .classify{
+			@extend .col-5;
+			position: relative;
+			&>.hd{
+				@include attrToRem(height,40);
+				@include attrToRem(line-height,40);
+				padding: 0 16px;
+				background-color: darken(colors(primary), 30%);
+			}
+			.ift-classify{
+				@include float(right);
+				cursor: pointer;
+			}
+			&:hover{
+				&>.bd{
+					display:block;
+				}
+			}
+			&.index{
+				&>.bd{
+					display:block;
+				}
+			}
+			&>.bd{
+				display: none;
+				position:absolute;
+				top: 40px;
+				left: 0;
+				right:0;
+				height:320px;
+				padding: 0 8px 0 16px;
+				background-color: colors(primary);
+				font-size: fonts(size) * 1.4;
+				dt{
+					font-weight: bold;
+					margin: 16px 0 4px;
+				}
+				dd{
+					height: 40px;
+					line-height: 20px;
+					overflow: hidden;
+				}
+				a{
+					margin-right: 8px;
+					white-space: nowrap;
+				}
+			}
+		}
+		@at-root .nav{
+			@include float;
+			margin-left: 24px;
+			&>li{
+				@include float;
+				padding: 0 16px;
+				height: 40px;
+				line-height: 40px;
+				font-weight: 500;
+				transition:.3s ease-in;
+				&:hover{
+					background-color: darken(colors(primary),5%);
+				}
+				&.active{
+					background-color: darken(colors(primary),10%);
+				}
+			}
+		}
+		@at-root .seller-entry{
+			@include float(right);
+			height: 40px;
+			line-height: 40px;
+			.ift-shop{
+				font-size:fonts(size) * 1.8; 
+			}
+			span{
+				font-size: fonts(size) * 1.8;
+			}
+		}
+	}
+}
+
+

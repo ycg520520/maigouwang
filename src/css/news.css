@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架,在运用时请注意是否安装sass
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 字体的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 圆角的key值
+ */
+/**
+ * 媒体查询相关mixin
+ */
+/**
+ * 解决IE9以下不支持rgba，下面是rgba的替代
+ * @param $color
+ * @param $opacity
+ */
+
+/*# sourceMappingURL=news.css.map */

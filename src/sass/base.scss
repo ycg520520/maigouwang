@@ -1,0 +1,148 @@
+@import "config";
+@import "fonts/fonts"; // 站点相关字体样式
+@import "model/reset"; // 重设默认样式
+@import "model/grid"; // 栅格栏样式
+@import "model/public"; // 公共样式
+@import "model/button"; // 按钮样式
+@import "model/header"; // 头部
+@import "model/search"; // 搜索
+@import "model/process"; // 流程
+@import "model/footer"; // 页脚
+@import "model/list"; // 列表样式
+@import "model/crumb"; // 面包屑
+@import "model/pages"; // 分页
+@import "model/box"; // 盒子基础样式
+@import "model/share"; // 分享类
+@import "model/tabs"; // tabs 基础样式
+@import "model/browser"; // 阅览器下载
+@import "model/tips"; // 提示样式
+
+/* 
+@import "model/site-nav"; // 站点导航
+@import "model/nav"; // 导航
+@import "model/form"; // 注册登录
+@import "model/validform"; // 注册登录
+@import "model/scroller"; // 模拟滚动
+*/
+
+// 狗狗美图
+.beauty{
+	.item{
+		position: relative;
+		@include float;
+		height: 208px;
+		width: 18.75%;
+		.thumbnail{
+			height: 100%;
+			img{
+				width:100%;
+				height: 100%;
+				background: no-repeat center center;
+			}
+		}
+		.info{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 32px;
+			padding:0 8px;
+			overflow: hidden;
+			color:colors(white);
+			transition:.3s ease-in;
+			&:before,.modify{
+				content:'';
+				position: absolute;
+				left: 0;
+				right:0;
+				height: 100%;
+				@include linear-gradient(to bottom,transparent, rgba(0, 0, 0, .5));
+				// @include opacity(50);
+			}
+		}
+		.title{
+			position: absolute;
+			left: 8px;
+			right: 8px;
+			bottom: 4px;
+			height: 24px;
+			line-height: 24px;
+			font-weight: normal;
+			font-size: fonts(size) * 1.2;
+			color: colors(white);
+			@include ellipsis;
+		}
+		
+		@include nth-child(1){
+			width: 25%;
+			height: 416px;
+		};
+		@include nth-child(2){
+			width: 37.5%;
+		};
+		@include last-child{
+			width: 37.5%;
+		};
+	}
+}
+
+// 服务保障
+.ensure{
+	@extend %clearfix;
+	dt{
+		height: 80px;
+		text-align: center;
+		overflow: hidden;
+		background: no-repeat center center;
+	}
+	.item{
+		@include float;
+		text-align: center;
+	}
+	[class*="ift-"]{
+		font-size: fonts(size) * 4;
+		display: block;
+		text-align: center;
+		color: lighten(colors(primary),10%);
+		line-height: 40px;
+	}
+	&.col3{
+		.item{
+			width:33.33333%;
+			height: 64px;
+			padding: 8px 0 7px 0;
+			border-bottom: 1px solid lighten(colors(gray),10%);
+			font-size: fonts(size) * 1.2;
+			color:colors(dark);
+			.txt{
+				line-height: 24px;
+			}
+		}
+	}
+	&.col4{
+		.item{
+			height: 40px;
+			font-size: fonts(size) * 1.2;
+			cursor: pointer;
+			&:hover{
+				.txt{
+					display: block;
+					color: colors(white);
+					background-color: lighten(colors(primary),10%)
+				}
+				[class*="ift-"]{
+					display: none;
+				}
+			}
+			.txt{
+				display:none;
+				margin: 0 auto;
+				width: 32px;
+				height: 28px;
+				padding: 6px 4px;
+				line-height: 14px;
+				border-radius:50%;
+			}
+		}
+	}
+}

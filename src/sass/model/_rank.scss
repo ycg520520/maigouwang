@@ -1,0 +1,23 @@
+@charset "UTF-8";
+//排行数字
+.rank-first,.rank-second,.rank-third,.rank-nor{
+	display:inline-block;
+	width:32px;
+	height:32px;
+	line-height:32px;
+	font-family: fonts(family);
+	font-size: fonts(size) * 2.4;
+	text-align: center;
+	color:colors(white);
+	background: colors(gray);
+	border-radius:50%;
+}
+.rank-first{
+	background-color:colors(auxiliary);
+}
+.rank-second{
+	background-color:colors(blue);
+}
+.rank-third{
+	background-color:colors(green);
+}

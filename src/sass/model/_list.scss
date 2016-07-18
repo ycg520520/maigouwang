@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.headlines{
+	margin-bottom: 10px;
+	// 缩略图
+	.thumbnail{
+		float:left;
+		margin-right:10px;
+	}
+	// 标题
+	&>.title{
+		height:35px;
+		line-height:35px;
+		overflow:hidden;
+		font-weight: bold;
+		font-size:fonts(size) * 1.8;
+	}
+	// 简介样式
+	.synopsis{
+		line-height:1.8;
+		font-size: fonts(size) * 1.4;
+		text-indent:2em;
+		color:colors(darker);
+	}
+	//更多样式
+	.more{
+		color:colors(gray);
+	}
+}
+
+//文字列表
+.list{
+	&>.item{
+		line-height: 30px;
+		font-size: fonts(size) * 1.4;
+		color:colors(dark);
+		@include ellipsis;
+		a{
+			text-decoration: none;
+			transition:.3s ease-in;
+		}
+		.time{
+			@include float(right);
+			margin: 0 3px;			
+			font-size: fonts(size) * 1.2;
+		}
+	}
+}
+.list-dot{
+	&>.item{
+		&:before{
+			content:"•";
+			margin-right: 3px;
+			color: lighten(colors(primary), 10%)
+		}
+	}
+}
+
+.list-thumbnail{
+	&>.item{
+		padding: 8px 0;
+		margin-top: -1px;
+		border-top: 1px solid colors(light);
+	}
+	.thumbnail{
+		float:left;
+		margin-right: 10px;
+	}
+	&>.title,&>h3{
+		line-height: 1.5;
+		color: colors(darker);
+		white-space: normal;
+	}
+}
+//文字列表 结束
+.col2{
+	@extend %clearfix;
+	.item{
+		float:left;
+		width: 48%;
+		margin-right: 4%;
+		@include nth-child(2n){
+			margin-right: 0;
+		};
+	}
+}
+
+// 产品列表
+.pro-list{
+	.thumbnail{
+		width:100%;
+		img{
+			width: 100%;
+		}
+	}
+	
+	.title{
+		height: 40px;
+		margin-bottom: 8px;
+		line-height: 20px;
+		color: colors(dark);
+		font-size: fonts(size) * 1.4;
+		font-weight: normal;
+		@include ellipsis(false);
+	}
+	.attr{
+		height: 24px;
+		font-size: fonts(size) * 1.4;
+	}
+	.name,.shop{
+		@include float;
+	}
+	.shop,.time{
+		font-size: fonts(size) * 1.2;
+		color: colors(dark);
+	}
+	.price,.time{
+		@include float(right);
+	}
+	.price{
+		color: colors(auxiliary);
+	}
+	
+	@at-root .col4{
+		&>.item{
+			@include float;
+			width: 22%;
+			margin-right: 4%;
+			margin-bottom: 16px;
+			overflow: hidden;
+			font-size: fonts(size) * 1.4;
+			@include nth-child(4n){
+				margin-right:0;
+			};
+		}
+		.info{
+			padding: 8px 0;
+		}
+	}
+	@at-root .pro-horizontal{
+		&>.item{
+			height: 80px;
+			padding:16px 0 16px 136px;
+			border-bottom: 1px dotted colors(gray);
+		}
+		.thumbnail{
+			@include float;
+			width: 120px;
+			margin-left: -136px;
+		}
+		.attr{
+			margin-top: 16px;
+			line-height: 24px;
+		}
+	}
+}

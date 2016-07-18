@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架,在运用时请注意是否安装sass
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 字体的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 圆角的key值
+ */
+/**
+ * 媒体查询相关mixin
+ */
+/**
+ * 解决IE9以下不支持rgba，下面是rgba的替代
+ * @param $color
+ * @param $opacity
+ */
+.slider-main {
+  height: 320px; }
+  .slider-main .swiper-wrapper {
+    height: 100%; }
+
+.floor > .hd i {
+  float: left;
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 44px;
+  padding-top: 2px;
+  margin-right: 8px;
+  border: 1px solid #97e095;
+  line-height: 36px;
+  background-color: #97e095;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle; }
+  .floor > .hd i.icon-blue {
+    border-color: #66bdf9;
+    background-color: #66bdf9; }
+  .floor > .hd i.icon-orange {
+    border-color: #ff944d;
+    background-color: #ff944d; }
+  .floor > .hd i:after {
+    content: '';
+    height: 8px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    position: absolute; }
+
+.floor .side, .floor .main {
+  display: inline;
+  float: left;
+  width: 25%;
+  height: 416px; }
+
+.floor .side a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center; }
+
+.floor .main {
+  width: 75%; }
+  .floor .main .item, .floor .main .slider {
+    display: inline;
+    float: left;
+    width: 25%;
+    height: 208px;
+    overflow: hidden; }
+  .floor .main .slider {
+    width: 50%; }
+  .floor .main .item {
+    position: relative;
+    font-size: 14px;
+    cursor: pointer; }
+    .floor .main .item:hover .info {
+      height: 68px; }
+    .floor .main .item .thumbnail {
+      height: 100%; }
+      .floor .main .item .thumbnail img {
+        width: 100%;
+        height: 100%;
+        background: no-repeat center center; }
+    .floor .main .item .info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 24px;
+      padding: 0 8px;
+      overflow: hidden;
+      color: #fff;
+      transition: .3s ease-in; }
+      .floor .main .item .info:before, .floor .main .item .info .modify {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=50); }
+    .floor .main .item .title {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 24px;
+      height: 40px;
+      font-weight: normal;
+      line-height: 18px;
+      overflow: hidden;
+      font-size: 12px; }
+    .floor .main .item .attr {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 0;
+      line-height: 24px; }
+    .floor .main .item .price {
+      float: right;
+      color: #ff6600; }
+
+.slider .swiper-container .ift-next, .slider .swiper-container .ift-prev {
+  font-size: 24px;
+  padding: 4px 0;
+  margin-top: -12px;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.knowledge .list {
+  display: inline;
+  float: left;
+  width: 22%;
+  margin-right: 4%;
+  overflow: hidden; }
+  .knowledge .list:last-child {
+    margin-right: 0; }
+  .knowledge .list.last-child, .knowledge .list.last {
+    margin-right: 0; }
+  .knowledge .list > dt {
+    margin-bottom: 16px; }
+    .knowledge .list > dt img {
+      width: 100%;
+      height: 80px; }
+
+.tabs-index > .hd {
+  height: 24px; }
+  .tabs-index > .hd > ul {
+    padding: 0 12px; }
+    .tabs-index > .hd > ul li {
+      margin: 0 12px; }
+  .tabs-index > .hd .modify {
+    bottom: -20px;
+    left: 432px; }
+
+.tabs-index .item {
+  display: inline;
+  float: left;
+  margin-right: 16px;
+  line-height: 2;
+  font-size: 14px; }
+
+/*# sourceMappingURL=index.css.map */
