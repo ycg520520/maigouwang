@@ -6,10 +6,10 @@ let lazypipe = require('lazypipe');
 const CFG = {
   // 路径配置
   src: './src/',
-  sass: './src/sass/**/*.scss', // sass文件
-  fonts: './src/sass/fonts/*.{eot,svg,ttf,woff}', // 字体文件
-  js: './src/js/**/*.js', // js文件
-  images: './src/images/**/*.{jpg,png,gif}', // 多文件支持
+  sass: './src/static/sass/**/*.scss', // sass文件
+  fonts: './src/static/sass/fonts/*.{eot,svg,ttf,woff}', // 字体文件
+  js: './src/static/js/**/*.js', // js文件
+  images: './src/static/images/**/*.{jpg,png,gif}', // 多文件支持
   html:'./src/app/**/*.{htm,html,shtm,shtml,ico,txt}', // 多文件支持
   dest: './dest/',
   // 入口配置
@@ -19,7 +19,7 @@ const CFG = {
     js: 'main.js'
   }
 }
-let cssFilter = $.filter(CFG.src+'css/**/*.css',{restore:true}),
+let cssFilter = $.filter(CFG.src+'static/css/**/*.css',{restore:true}),
     jsFilter = $.filter(CFG.js,{restore:true});
 
 // scss文件编译和相关配置 图片压缩必须在sass编译前完成
@@ -30,7 +30,7 @@ gulp.task('sass',() => {
     .pipe($.sourcemaps.init())
     .pipe($.postcss([$.autoprefixer]))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest(CFG.src+'css'))
+    .pipe(gulp.dest(CFG.src+'static/css'))
     .pipe($.notify({message: 'sass文件编译css完成!'})) // 编译提示信息
     .pipe($.connect.reload())
 });
@@ -44,7 +44,7 @@ gulp.task('images:dev',()=>{
 gulp.task('images:build',()=>{
   return gulp.src(CFG.images)
     // .pipe($.imagemin())
-    .pipe(gulp.dest(CFG.dest+'images'))
+    .pipe(gulp.dest(CFG.dest+'static/images'))
     .pipe($.notify({message:'图片压缩处理完成!'})) // 编译提示信息
 });
 
@@ -79,11 +79,11 @@ gulp.task('html:build', ['sass'], ()=>{
     .pipe($.useref()) // useref分析html文件中带有build注释的css,js块
     .pipe($.if('*.js',$.rev())) // 文件MD5版本号
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.revReplace()) // 替换改变文件MD5版本号
     .pipe($.if('*.css',$.rev())) // 文件MD5版本号
     .pipe($.if('*.css', $.cleanCss()))
     .pipe($.revReplace()) // 替换改变文件MD5版本号
-    .pipe(gulp.dest(CFG.dest))
+    .pipe(gulp.dest(CFG.dest+'app'))
+    // .pipe(gulp.dest(CFG.dest))
     .pipe($.notify({message:'html拷贝完成!'})) // 编译提示信息
     .pipe($.connect.reload())
 })
@@ -91,13 +91,13 @@ gulp.task('html:build', ['sass'], ()=>{
 // 处理字体
 gulp.task('fonts:dev', ()=>{
   return gulp.src(CFG.fonts)
-    .pipe(gulp.dest(CFG.src+'css/fonts'))
+    .pipe(gulp.dest(CFG.src+'static/css/fonts'))
     .pipe($.notify({message:'字体文件处理完毕!'})) // 编译提示信息
     .pipe($.connect.reload())
 })
 gulp.task('fonts:build', ()=>{
   return gulp.src(CFG.fonts)
-    .pipe(gulp.dest(CFG.dest+'css/fonts'))
+    .pipe(gulp.dest(CFG.dest+'static/css/fonts'))
     .pipe($.notify({message:'字体文件处理完毕!'})) // 编译提示信息
 })
 
