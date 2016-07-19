@@ -138,4 +138,4 @@ gulp.task('connectBuild', ()=>{
 gulp.task('default', ['connect','watch']);
 
 // 开发完成后构建的任务
-gulp.task('build', ['connectBuild','sass','fonts:build','images:build','js:dev', 'html:build']);
+gulp.task('build', ['sass','fonts:build','images:build','js:dev', 'html:build']);

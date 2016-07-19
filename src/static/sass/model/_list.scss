@@ -43,6 +43,11 @@
 			margin: 0 3px;			
 			font-size: fonts(size) * 1.2;
 		}
+		&.line{
+			padding-bottom: 16px;
+			border-bottom: 1px dotted colors(gray);
+			margin-bottom: 16px;
+		}
 	}
 }
 .list-dot{
