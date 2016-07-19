@@ -8,6 +8,7 @@
 			@include float;
 			height:47px;
 			border-bottom: 3px solid colors(auxiliary);
+			margin-bottom: -1px;
 			line-height:47px;
 			font-weight: normal;
 			font-size: fonts(size) * 2.4;
@@ -30,7 +31,7 @@
 		}
 	}	
 	&>.bd{
-		padding: 16px 0;
+		// padding: 16px 0;
 	}
 }
 

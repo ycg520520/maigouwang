@@ -57,20 +57,57 @@
 
 .list-thumbnail{
 	&>.item{
-		padding: 8px 0;
-		margin-top: -1px;
-		border-top: 1px solid colors(light);
+		padding: 16px 0;
+		border-bottom: 1px dotted colors(gray);
+		font-size: fonts(size) * 1.4;
+		@extend %clearfix;
+	}
+	.title{
+		height: 40px;
+		line-height: 40px;
+		font-size: fonts(size) * 2;
+		color: colors(darker);
+		font-weight: normal;
+		.type{
+			color: colors(gray);
+		}
+		strong{
+			color: colors(auxiliary);
+			font-weight: normal;
+		}
 	}
 	.thumbnail{
-		float:left;
-		margin-right: 10px;
+		@include float;
+		width: 144px;
+		img{
+			width: 100%;
+		}
 	}
-	&>.title,&>h3{
+	.describe{
+		margin-left: 160px;
+		height: 42px;
+		margin-bottom: 16px;
 		line-height: 1.5;
-		color: colors(darker);
-		white-space: normal;
+		overflow: hidden;
+	}
+	.attr{
+		margin-left: 160px;
+		color: colors(dark);
+		&>span{
+			margin-right: 8px;
+		}
+	}
+	.source{}
+	.time{}
+	.read-num{}
+	.comment-num{}
+	.tags{
+		a{
+			margin: 0 4px;
+		}
 	}
 }
+
 //文字列表 结束
 .col2{
 	@extend %clearfix;

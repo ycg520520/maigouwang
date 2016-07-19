@@ -20,6 +20,12 @@
  * 获取圆角map方法
  * @parm $k 圆角的key值
  */
+.news > .hd .title:before {
+  content: "";
+  height: 0;
+  width: 0;
+  overflow: hidden; }
+
 /**
  * 媒体查询相关mixin
  */
@@ -28,5 +34,26 @@
  * @param $color
  * @param $opacity
  */
+.news > .hd {
+  height: 40px;
+  margin: 32px 0; }
+  .news > .hd .title {
+    position: relative;
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0 24px;
+    line-height: 40px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: normal;
+    background-color: #5ccf5a; }
+    .news > .hd .title:before {
+      position: absolute;
+      left: 0;
+      bottom: -16px;
+      border-style: solid solid dashed dashed;
+      border-width: 8px 16px;
+      border-color: #3abf37 #3abf37 transparent transparent; }
 
 /*# sourceMappingURL=news.css.map */

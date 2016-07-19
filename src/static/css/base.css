@@ -93,9 +93,9 @@
     opacity: .65;
     box-shadow: none; }
 
-.row, .clear, .clearfix, .col2, .ensure {
+.row, .clear, .clearfix, .list-thumbnail > .item, .col2, .tags, .ensure {
   zoom: 1; }
-  .row:before, .clear:before, .clearfix:before, .col2:before, .ensure:before, .row:after, .clear:after, .clearfix:after, .col2:after, .ensure:after {
+  .row:before, .clear:before, .clearfix:before, .list-thumbnail > .item:before, .col2:before, .tags:before, .ensure:before, .row:after, .clear:after, .clearfix:after, .list-thumbnail > .item:after, .col2:after, .tags:after, .ensure:after {
     content: "";
     display: table;
     clear: both; }
@@ -1058,6 +1058,9 @@ li {
 .mb24 {
   margin-bottom: 24px; }
 
+.ad img {
+  width: 100%; }
+
 .btn {
   padding: 0 10px;
   font-size: 14px;
@@ -1610,18 +1613,44 @@ li {
   color: #83da82; }
 
 .list-thumbnail > .item {
-  padding: 8px 0;
-  margin-top: -1px;
-  border-top: 1px solid #fcfcfc; }
+  padding: 16px 0;
+  border-bottom: 1px dotted #ddd;
+  font-size: 14px; }
+
+.list-thumbnail .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #333;
+  font-weight: normal; }
+  .list-thumbnail .title .type {
+    color: #ddd; }
+  .list-thumbnail .title strong {
+    color: #ff6600;
+    font-weight: normal; }
 
 .list-thumbnail .thumbnail {
+  display: inline;
   float: left;
-  margin-right: 10px; }
+  width: 144px; }
+  .list-thumbnail .thumbnail img {
+    width: 100%; }
 
-.list-thumbnail > .title, .list-thumbnail > h3 {
+.list-thumbnail .describe {
+  margin-left: 160px;
+  height: 42px;
+  margin-bottom: 16px;
   line-height: 1.5;
-  color: #333;
-  white-space: normal; }
+  overflow: hidden; }
+
+.list-thumbnail .attr {
+  margin-left: 160px;
+  color: #999; }
+  .list-thumbnail .attr > span {
+    margin-right: 8px; }
+
+.list-thumbnail .tags a {
+  margin: 0 4px; }
 
 .col2 .item {
   float: left;
@@ -1761,6 +1790,7 @@ li {
     float: left;
     height: 47px;
     border-bottom: 3px solid #ff6600;
+    margin-bottom: -1px;
     line-height: 47px;
     font-weight: normal;
     font-size: 24px;
@@ -1779,9 +1809,6 @@ li {
     display: block;
     font-size: 13px;
     margin-top: 4px; }
-
-.box > .bd {
-  padding: 16px 0; }
 
 .box-center > .hd {
   height: 24px;
@@ -1892,6 +1919,20 @@ li {
   background-color: white;
   border-color: white;
   color: #333; }
+
+.tags > .item {
+  display: inline;
+  float: left;
+  margin: 0 4px 8px 0;
+  font-size: 14px; }
+  .tags > .item a {
+    display: block;
+    padding: 0 4px;
+    background-color: #e0f2fe;
+    line-height: 1.5;
+    border-radius: 3px; }
+    .tags > .item a:hover {
+      color: #ff6600; }
 
 /* 
 @import "model/site-nav"; // 站点导航
