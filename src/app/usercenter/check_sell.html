@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<!--#include virtual="/app/public/head.html"-->
+	<!-- build:css ../static/css/base.css -->
+		<link rel="stylesheet" href="../../static/css/base.css">
+		<link rel="stylesheet" href="../../static/css/swiper.css">
+	<!-- endbuild -->
+	<!-- build:css ../static/css/usercenter.css -->
+		<link rel="stylesheet" href="../../static/css/usercenter.css">
+	<!-- endbuild -->
+</head>
+<body>
+<!--#include virtual="/app/public/header.html"-->
+<div class="container">
+	<div class="row">
+		<div class="col-24">
+			<!-- 面包屑 -->
+			<div class="crumb"><em>首页</em> > <strong>用户中心</strong></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-5">
+			<!--#include virtual="/app/public/uc_nav.html"-->
+		</div>
+		<div class="col-18 col-offset-1">
+			<div class="tabs tabs-f18">
+				<div class="hd">
+					<ul>
+						<li class="active">全部订单</li>
+						<li>待付款</li>
+						<li>待发货</li>
+						<li>已关闭</li>
+					</ul>
+					<i class="modify"></i>				
+				</div>
+				<div class="bd">
+					<!-- tabs 项目开始 -->
+					<div class="tabs-item">
+						<table class="table mt16">
+							<!-- 控制表格宽度 -->
+							<colgroup>
+								<col class="table-col10">
+								<col class="table-col3">
+								<col class="table-col3">
+								<col class="table-col4">
+								<col class="table-col4">
+							</colgroup>
+							<!-- 表格头部 -->
+							<thead>
+								<tr>
+									<th>狗狗信息</th>
+									<th>单价</th>
+									<th>成交价</th>
+									<th>交易状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="order-container">
+							<table class="table">
+								<!-- 控制表格宽度 -->
+								<colgroup>
+									<col class="table-col10">
+									<col class="table-col3">
+									<col class="table-col3">
+									<col class="table-col4">
+									<col class="table-col4">
+								</colgroup>
+								<!-- 表格头部 -->
+								<thead class="thead">
+									<tr>
+										<th class="tal">
+											<span class="time">2016-06-13</span>
+											<span class="shop"><strong>卖家:</strong> 快乐犬家...</span>
+										</th>
+										<th colspan="4">
+											<span class="address"><strong>发货信息: </strong>空运，航班号CA4508，成都双流机场托运中心，电话028-88888888</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<a href="#">
+												<div class="thumbnail">
+													<img src="images/space3x2.gif" data-src="images/dog/3.jpg" alt="顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬">
+												</div>
+												<div class="info">
+													<p class="des">顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬</p>
+												</div>
+											</a>
+										</td>
+										<td class="tac">
+											<span class="del gray">5000元</span><br>
+											4500元
+										</td>
+										<td class="tac red">3500元</td>
+										<td class="green">买家已付款，等待卖家发货</td>
+										<td class="tac">
+											<a href="#" class="btn-lg btn-block btn-red">立即发货</a>
+											<a href="#" class="mt8 btn-lg btn-block btn-default">关闭交易</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="order-container">
+							<table class="table">
+								<!-- 控制表格宽度 -->
+								<colgroup>
+									<col class="table-col10">
+									<col class="table-col3">
+									<col class="table-col3">
+									<col class="table-col4">
+									<col class="table-col4">
+								</colgroup>
+								<!-- 表格头部 -->
+								<thead class="thead">
+									<tr>
+										<th class="tal">
+											<span class="time">2016-06-13</span>
+											<span class="shop"><strong>卖家:</strong> <a href="#">快乐犬家...</a></span>
+										</th>
+										<th colspan="4">
+											<span class="address"><strong>发货信息: </strong>空运，航班号CA4508，成都双流机场托运中心，电话028-88888888</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="thumbnail">
+											<a href="#">
+												<img src="images/space3x2.gif" data-src="images/dog/2.jpg" alt="顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬">
+											</a>
+											</div>
+											<div class="info">
+												<p class="des"><a href="#">顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬</a></p>
+											</div>
+										</td>
+										<td class="tac">
+											<span class="del gray">5000元</span><br>
+											4500元
+										</td>
+										<td class="tac red">3500元</td>
+										<td class="green">等待买家付款</td>
+										<td class="tac">
+											<a href="#" class="btn-lg btn-block btn-default">关闭交易</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="order-container">
+							<table class="table">
+								<!-- 控制表格宽度 -->
+								<colgroup>
+									<col class="table-col10">
+									<col class="table-col3">
+									<col class="table-col3">
+									<col class="table-col4">
+									<col class="table-col4">
+								</colgroup>
+								<!-- 表格头部 -->
+								<thead class="thead">
+									<tr>
+										<th class="tal">
+											<span class="time">2016-06-13</span>
+											<span class="shop"><strong>卖家:</strong> 快乐犬家...</span>
+										</th>
+										<th colspan="4">
+											<span class="address"><strong>发货信息: </strong>空运，航班号CA4508，成都双流机场托运中心，电话028-88888888</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="thumbnail">
+											<a href="#">
+												<img src="images/space3x2.gif" data-src="images/dog/2.jpg" alt="顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬">
+											</a>
+											</div>
+											<div class="info">
+												<p class="des"><a href="#">顶级鹰版巴哥三针齐公母全可送货 憨厚很萌精品巴哥犬</a></p>
+											</div>
+										</td>
+										<td class="tac">
+											<span class="del gray">5000元</span><br>
+											4500元
+										</td>
+										<td class="tac red">3500元</td>
+										<td class="green">等待买家收货</td>
+										<td class="tac"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 分页 开始 -->
+						<div class="pages">
+							<span class="prev"><</span> <span class="active">2</span> <a href="#">3</a> … <a href="#">8</a> <a href="#" class="next">></a>
+						</div>
+					</div>					
+				</div>			
+			</div>
+		</div>
+	</div>
+</div>
+<!--#include virtual="/app/public/footer.html"-->
+<!-- build:js ../static/js/uc-base.js -->
+<script type="text/javascript" src="../../static/js/plugins/jquery.js"></script>
+<script type="text/javascript" src="../../static/js/common.js"></script>
+<!-- endbuild -->
+<!-- build:js ../static/js/list.js -->
+<script type="text/javascript" src="../../static/js/usercenter.js"></script>
+<!-- endbuild -->
+<script>
+	G.equalLayout($('.conact-side'),$('.conact-main'));
+</script>
+</body>
+</html>
+    

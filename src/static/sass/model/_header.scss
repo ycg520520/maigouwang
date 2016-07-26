@@ -46,7 +46,7 @@
 	}
 	@at-root .nav-bar{
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		@include attrToRem(height,40);
 		@include attrToRem(margin-top,24);
 		background-color: colors(primary);
@@ -98,7 +98,7 @@
 				}
 				a{
 					margin-right: 8px;
-					white-space: nowrap;
+					// white-space: nowrap;
 				}
 			}
 		}

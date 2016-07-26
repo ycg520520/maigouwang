@@ -10,6 +10,7 @@
   outline: 0;
   border:0;
   color:colors(white);
+  border-radius: 3px;
   *overflow:visible; //解决ie67双倍padding
   transition:.3s ease-in;
   &:hover,&:focus {

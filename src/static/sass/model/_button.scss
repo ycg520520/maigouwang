@@ -84,11 +84,11 @@
 }
 .btn-lg{
   @extend %button;
-  @include buttonSize(0 16px, fonts(size) * 1.6, 32px, 0);
+  @include buttonSize(0 16px, fonts(size) * 1.4, 32px, 0);
 }
 .btn-xl{
   @extend %button;
-  @include buttonSize(0 24px, fonts(size) * 2, 40px, 0);
+  @include buttonSize(0 24px, fonts(size) * 1.8, 40px, 0);
 }
 .btn-block{
   padding: 0;

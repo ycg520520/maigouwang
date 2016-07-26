@@ -27,4 +27,11 @@
 	&>.bd{
 
 	}
+	@at-root &-f18{
+		&>.hd{
+			li{
+				font-size: fonts(size) * 1.8;
+			}
+		}
+	}
 }

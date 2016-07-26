@@ -14,6 +14,7 @@
 		font-family:Arial;
 		border-radius:50%;
 		vertical-align: middle;
+		transition: .3s ease-in-out;
 		&.prev,&.next{
 			background-color: colors(gray);
 			color: colors(white);

@@ -138,6 +138,18 @@
 		},
 
 		/**
+		 * 等高布局设置
+		 * @param obj1 jquery dom obj
+		 * @param obj2 jquery dom obj
+		 */
+		equalLayout: function(obj1,obj2){
+			var obj1H = obj1.outerHeight(),
+				obj2H = obj2.outerHeight();
+				console.log(obj1H,obj2H);
+			(obj1H>obj2H)?(obj2.css('height',obj1H)):(obj1.css('height',obj2H));
+		},
+
+		/**
 		 * addFavorite 加入收藏加
 		 * @param {string} url   添加到收藏夹的地址
 		 * @param {string} title 添加到收藏加的名称

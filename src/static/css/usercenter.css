@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架,在运用时请注意是否安装sass
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 字体的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 圆角的key值
+ */
+/**
+ * 媒体查询相关mixin
+ */
+/**
+ * 解决IE9以下不支持rgba，下面是rgba的替代
+ * @param $color
+ * @param $opacity
+ */
+.uc-aside {
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+  background-color: #fcfcfc; }
+  .uc-aside > .hd {
+    height: 72px;
+    padding: 16px;
+    font-size: 12px; }
+  .uc-aside .thumbnail {
+    display: inline;
+    float: left;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    overflow: hidden; }
+  .uc-aside .figcaption {
+    margin-left: 80px;
+    padding-top: 16px; }
+    .uc-aside .figcaption > .title {
+      font-size: 16px;
+      line-height: 24px;
+      height: 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 4px;
+      font-weight: normal; }
+    .uc-aside .figcaption > .des {
+      line-height: 1.5; }
+  .aside-nav dt {
+    height: 48px;
+    line-height: 48px;
+    color: #1c9ef6;
+    font-size: 16px;
+    background-color: #c8e7fd; }
+  .aside-nav dt, .aside-nav .item {
+    padding: 0 16px; }
+  .aside-nav .item {
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid #f1f1f1;
+    border-width: 1px 0;
+    margin-bottom: -1px;
+    line-height: 40px; }
+    .aside-nav .item.active {
+      position: relative;
+      z-index: 1;
+      color: #ff6600;
+      margin-right: -1px;
+      background-color: #fff; }
+      .aside-nav .item.active a {
+        color: #ff6600; }
+
+.order-container {
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid #f7f7f7;
+  transition: .3s ease-in-out; }
+  .order-container:hover {
+    border-color: #c4c4c4; }
+  .order-container:nth-child(2n-1) {
+    border: 1px solid #e0f2fe; }
+    .order-container:nth-child(2n-1):hover {
+      border-color: #7ec8fa; }
+    .order-container:nth-child(2n-1) thead {
+      background-color: #e0f2fe; }
+    .order-container:nth-child(2n-1) .table, .order-container:nth-child(2n-1) th, .order-container:nth-child(2n-1) td {
+      border-color: #e0f2fe; }
+  .order-container strong {
+    font-weight: normal;
+    color: #999; }
+  .order-container thead th, .order-container thead td {
+    border: 0; }
+  .order-container thead th, .order-container thead strong {
+    font-weight: normal; }
+  .order-container thead .time {
+    margin-right: 24px; }
+  .order-container thead .address {
+    display: block;
+    white-space: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .order-container .table, .order-container th, .order-container td {
+    vertical-align: top; }
+  .order-container .table {
+    border: 0; }
+  .order-container tbody .thumbnail {
+    display: inline;
+    float: left;
+    width: 168px;
+    height: 112px; }
+    .order-container tbody .thumbnail img {
+      width: 100%; }
+  .order-container tbody .info {
+    margin-left: 176px; }
+  .order-container tbody .des {
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+    margin: 4px 0; }
+  .order-container tbody .time {
+    font-size: 12px;
+    height: 40px;
+    line-height: 20px; }
+
+/*# sourceMappingURL=usercenter.css.map */
