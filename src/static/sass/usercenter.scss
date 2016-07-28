@@ -1,4 +1,5 @@
 @import "config";
+// 用户中心侧边导航用户信息
 .uc-aside{
 	font-size: fonts(size) * 1.4;
 	border: 1px solid lighten(colors(gray), 8%);
@@ -67,7 +68,6 @@
 			}
 		}
 	}
-
 }
 
 // 订单内容
@@ -147,5 +147,166 @@
 			height:40px;
 			line-height: 20px;
 		}
+	}
+}
+
+// 收藏夹 工具操作
+.fav-tools{
+	padding-top: 16px;
+	@include float(right);
+	text-align: right;
+	color: colors(dark);
+	font-size: fonts(size) * 1.4;
+	@at-root{
+		&-list{
+			display: none;
+			&>.item{
+				display: inline-block;
+				margin-left: 8px;
+			}
+		}		
+	}	
+}
+
+// 收藏夹列表
+.fav-list{
+	margin: 16px auto 32px;
+	// border: 1px solid lighten(colors(gray), 8%);
+	font-size: fonts(size) * 1.4;
+	line-height: 32px;
+	&>.hd{
+		border: 1px solid lighten(colors(gray), 8%);
+		// border-bottom: 1px solid lighten(colors(gray), 8%);
+		.cell{
+			border: 1px solid lighten(colors(gray), 8%);
+			border-width:1px 1px 0 0;
+			text-align: center;			
+		}
+		.item{
+			@include first-child{
+				.cell{
+					border-top-width:0;
+				}
+			}
+			background-color: colors(light);
+		}
+	}
+	&>.bd{
+		.item{
+			margin-top: 1px;
+			@include nth-child(2n-1){
+				background-color: colors(white);
+			}
+			@include nth-child(2n){
+				background-color: colors(light);
+			}
+		}
+	}
+	&.editor-item{
+		.item{
+			.opt{
+				display: block;
+				z-index: 2;
+				display: block;
+			}
+		}
+	}
+	
+	.item{
+		position: relative;
+		@extend %clearfix;
+		&:hover{
+			.opt{				
+				border-color: darken(colors(gray), 10%);
+			}
+		}
+		&.active{
+			.opt{				
+				border-color: colors(auxiliary);
+				background-color: rgba(colors(black),.05);
+				.ift-select{
+					color: colors(auxiliary);
+				}
+				.ift-del{
+					background-color: colors(auxiliary);
+				}
+			}
+		}
+	}
+	
+	.opt{
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom:0;
+		z-index: 1;
+		border: 1px solid colors(gray);
+		background-color: rgba(colors(black),.05);
+		// cursor: pointer;
+		// @include opacity(10);
+		[class*="ift-"]{
+			position: absolute;
+			right:0;
+			line-height: 1;
+			font-size: fonts(size) * 1.6;
+			
+			cursor: pointer;
+		}
+		.ift-del{
+			padding: 2px 2px 3px;			
+			font-size: fonts(size) * 1.4;
+			background-color: colors(white);
+			color: colors(white);
+			background-color: colors(gray);
+		}
+		.ift-select{
+			color: colors(gray);
+			bottom: 0;
+		}
+
+	}
+
+	.cell{
+		width: 100%;
+		@include float;
+		height: 48px;
+		padding:8px;
+		box-sizing: border-box;
+		@include ellipsis;
+		@include last-child{
+			border-right-width: 0;
+		}
+	}
+	.cell-1{
+		width: 10%;
+	}
+	.cell-2{
+		width: 20%;
+	}
+	.cell-3{
+		width: 30%;
+	}
+	.cell-4{
+		width: 40%;
+	}
+	.cell-5{
+		width: 50%;
+	}
+	.cell-6{
+		width: 60%;
+	}
+	.cell-6{
+		width: 60%;
+	}
+	.cell-7{
+		width: 70%;
+	}
+	.cell-8{
+		width: 80%;
+	}
+	.cell-9{
+		width: 90%;
 	}
 }

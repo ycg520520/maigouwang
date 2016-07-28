@@ -20,7 +20,19 @@
   }
 }
 
-.btn-default,.btn-gray{
+.btn-default{
+  color:colors(dark);
+  border:1px solid colors(gray);
+  // background-color: lighten(colors(gray),5%);
+  // background-image:linear-gradient(top,lighten(colors(gray),18%) lighten(colors(gray),12%));
+  text-shadow:1px 1px 0 0 rgba(colors(white), .5);
+  &:hover,&:focus{
+    color:colors(dark);
+    // background-image:linear-gradient(top,lighten(colors(gray),3%) lighten(colors(gray),13%));
+  }
+}
+
+.btn-gray{
   color:colors(dark);
   background-color: lighten(colors(gray),5%);
   // background-image:linear-gradient(top,lighten(colors(gray),18%) lighten(colors(gray),12%));

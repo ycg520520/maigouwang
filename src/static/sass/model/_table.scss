@@ -46,6 +46,10 @@
 	.bg-white{background-color: colors(white);}
 
 	@at-root{
+		&+&{
+			margin-top: -1px;
+		}
+
 		&-col3{
 			width: 10%;
 		}
@@ -53,6 +57,7 @@
 			width: 15%;
 		}
 	}
+
 }
 .table-hover{
 	tbody{
@@ -82,7 +87,7 @@
 	tbody{
 		tr{
 			&.even,&:nth-child(2n){
-				background-color: lighten(colors(light),3%);
+				background-color: colors(light);
 			}
 			&.odd,&:nth-child(2n-1){
 				background-color: colors(white);

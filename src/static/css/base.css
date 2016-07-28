@@ -137,135 +137,6 @@
 .ift-choose:before {
   content: "\e606"; }
 
-.ift-classify:before {
-  content: "\e607"; }
-
-.ift-close:before {
-  content: "\e608"; }
-
-.ift-contract:before {
-  content: "\e609"; }
-
-.ift-depict:before {
-  content: "\e60a"; }
-
-.ift-phone:before {
-  content: "\e60b"; }
-
-.ift-plane:before {
-  content: "\e60c"; }
-
-.ift-prev:before {
-  content: "\e60d"; }
-
-.ift-pure:before {
-  content: "\e60e"; }
-
-.ift-qq:before {
-  content: "\e60f"; }
-
-.ift-safepay:before {
-  content: "\e610"; }
-
-.ift-search:before {
-  content: "\e611"; }
-
-.ift-service:before {
-  content: "\e612"; }
-
-.ift-shop:before {
-  content: "\e613"; }
-
-.ift-sina:before {
-  content: "\e614"; }
-
-.ift-user:before {
-  content: "\e615"; }
-
-.ift-guide:before {
-  content: "\e616"; }
-
-.ift-healthy:before {
-  content: "\e617"; }
-
-.ift-heart:before {
-  content: "\e618"; }
-
-.ift-mico:before {
-  content: "\e619"; }
-
-.ift-more:before {
-  content: "\e61a"; }
-
-.ift-next:before {
-  content: "\e61b"; }
-
-.ift-payment:before {
-  content: "\e61c"; }
-
-.ift-wangwang:before {
-  content: "\e61d"; }
-
-.ift-weixin:before {
-  content: "\e61e"; }
-
-.ift-vaccin:before {
-  content: "\e61f"; }
-
-.ift-vedio:before {
-  content: "\e620"; }
-
-.ift-msg:before {
-  content: "\e621"; }
-
-.ift-del:before {
-  content: "\e622"; }
-
-.ift-alarm:before {
-  content: "\e623"; }
-
-.ift-share:before {
-  content: "\e624"; }
-
-.ift-ding:before {
-  content: "\e625"; }
-
-.ift-logo:before {
-  content: "\e626"; }
-
-.ift-maigouwang:before {
-  content: "\e627"; }
-
-.ift-upload:before {
-  content: "\e628"; }
-
-.ift-up:before {
-  content: "\e600"; }
-
-.ift-down:before {
-  content: "\e601"; }
-
-.ift-30day:before {
-  content: "\e602"; }
-
-.ift-advise:before {
-  content: "\e603"; }
-
-.ift-ask:before {
-  content: "\e604"; }
-
-.ift-chip:before {
-  content: "\e605"; }
-
-.ift-choose:before {
-  content: "\e606"; }
-
-.ift-close:before {
-  content: "\e608"; }
-
-.ift-classify:before {
-  content: "\e607"; }
-
 .ift-contract:before {
   content: "\e609"; }
 
@@ -364,6 +235,15 @@
 
 .ift-face:before {
   content: "\e629"; }
+
+.ift-close:before {
+  content: "\e608"; }
+
+.ift-classify:before {
+  content: "\e607"; }
+
+.ift-select:before {
+  content: "\e62a"; }
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -1076,11 +956,18 @@ li {
 .btn-auxiliary {
   background-color: #ff6600; }
 
-.btn-default, .btn-gray {
+.btn-default {
+  color: #999;
+  border: 1px solid #ddd;
+  text-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.5); }
+  .btn-default:hover, .btn-default:focus {
+    color: #999; }
+
+.btn-gray {
   color: #999;
   background-color: #eaeaea;
   text-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.5); }
-  .btn-default:hover, .btn-default:focus, .btn-gray:hover, .btn-gray:focus {
+  .btn-gray:hover, .btn-gray:focus {
     color: #999; }
 
 .btn-danger, .btn-red {
@@ -1796,10 +1683,11 @@ li {
   .box > .hd .title {
     display: inline;
     float: left;
-    height: 47px;
+    height: 40px;
+    padding-top: 7px;
     border-bottom: 3px solid #ff6600;
     margin-bottom: -1px;
-    line-height: 47px;
+    line-height: 40px;
     font-weight: normal;
     font-size: 24px;
     font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
@@ -1820,6 +1708,9 @@ li {
 
 .box > .bd {
   padding: 16px 0; }
+
+.box-f18 > .hd .title {
+  font-size: 18px; }
 
 .box-center > .hd {
   height: 24px;
@@ -2191,6 +2082,8 @@ li {
     background-color: #fcfcfc; }
   .table .bg-white {
     background-color: #fff; }
+  .table + .table {
+    margin-top: -1px; }
   .table-col3 {
     width: 10%; }
   .table-col4 {
@@ -2210,7 +2103,7 @@ li {
     border-width: 0; }
 
 .table-alternate tbody tr.even, .table-alternate tbody tr:nth-child(2n) {
-  background-color: white; }
+  background-color: #fcfcfc; }
 
 .table-alternate tbody tr.odd, .table-alternate tbody tr:nth-child(2n-1) {
   background-color: #fff; }

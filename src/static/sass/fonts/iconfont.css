@@ -1,10 +1,10 @@
 
 @font-face {font-family: "maigouwang";
-  src: url('iconfont.eot?t=1468565521'); /* IE9*/
-  src: url('iconfont.eot?t=1468565521#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1468565521') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1468565521') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1468565521#maigouwang') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1469672407'); /* IE9*/
+  src: url('iconfont.eot?t=1469672407#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1469672407') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1469672407') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1469672407#maigouwang') format('svg'); /* iOS 4.1- */
 }
 
 .maigouwang {
@@ -22,8 +22,6 @@
 .ift-ask:before { content: "\e604"; }
 .ift-chip:before { content: "\e605"; }
 .ift-choose:before { content: "\e606"; }
-.ift-close:before { content: "\e608"; }
-.ift-classify:before { content: "\e607"; }
 .ift-contract:before { content: "\e609"; }
 .ift-depict:before { content: "\e60a"; }
 .ift-phone:before { content: "\e60b"; }
@@ -57,3 +55,6 @@
 .ift-maigouwang:before { content: "\e627"; }
 .ift-upload:before { content: "\e628"; }
 .ift-face:before { content: "\e629"; }
+.ift-close:before { content: "\e608"; }
+.ift-classify:before { content: "\e607"; }
+.ift-select:before { content: "\e62a"; }

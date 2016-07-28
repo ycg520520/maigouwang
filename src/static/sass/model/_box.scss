@@ -6,10 +6,11 @@
 		border-bottom:1px solid colors(gray);
 		.title{
 			@include float;
-			height:47px;
+			height:40px;
+			padding-top: 7px;
 			border-bottom: 3px solid colors(auxiliary);
 			margin-bottom: -1px;
-			line-height:47px;
+			line-height:40px;
 			font-weight: normal;
 			font-size: fonts(size) * 2.4;
 			font-family: fonts(family);
@@ -32,6 +33,13 @@
 	}	
 	&>.bd{
 		padding: 16px 0;
+	}
+	@at-root &-f18{
+		&>.hd{
+			.title{
+				font-size: fonts(size) * 1.8;
+			}
+		}
 	}
 }
 
