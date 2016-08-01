@@ -1,206 +1,260 @@
 @charset "UTF-8";
-//表单基础盒子
-input,button{
-	margin: 0 3px 0 0;
-	vertical-align: middle;
+/**
+ * 重设form基础设置
+ */
+
+fieldset {
+	border: none;
 }
 
-.input,input[type="text"],.textarea,textarea,.select,select,.select-multiple{
-	padding:4px;
-	margin: 0;
-	border: 1px solid colors(gray);
-	font-size: fonts(size) * 1.4;
-	color: colors(dark);
-	vertical-align: middle;
-	font-family: fonts(family);
-	box-shadow:0 2px 3px 0 lighten(colors(gray), 13.3%) inset;
-	outline: none;
-	&:focus{
-		border-color:lighten(colors(primary), 30%);
-		box-shadow:0 2px 3px 0 lighten(colors(gray), 13.3%) inset, 0 0 5px 0 lighten(colors(primary), 30%);
-	}
-}
-.input{
-	height: 16px;
-	line-height: 16px;
-}
-.input-block{
+legend {
+	display: block;
 	width: 100%;
-	height: 26px;
-	box-sizing:border-box;
+	margin-bottom: 1.5rem;
+	font-size: fonts(size) * 1.6;
+	line-height: inherit;
+	color: colors(dark);
+	border-bottom: 1px solid colors(gray);
+	padding-bottom: 0.5rem;
 }
-.select{
-	height: 26px;
-	padding:0;
-	line-height: 26px;
-	vertical-align: top;
+
+label {
+	display: inline-block;
+	margin-bottom: 4px;
+	cursor: pointer;
 }
-.select-multiple{
-	padding:0;
-	line-height: 26px;
-	vertical-align: top;
+
+// 重写盒子模型表现方式
+input[type="search"] {
+	box-sizing: border-box;
 }
-input[type="checkbox"],input[type="radio"],.checkbox,.radio{
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+	/* margin: 4px 0 0;
+	margin-top: 1px \9; // IE8-9
+	line-height: normal; */  
 	margin:-2px 3px 0 0;
 	vertical-align:-2px;
 	cursor: pointer;
 	*margin:-1px 0 0 0;
 	overflow: hidden;
 }
-.textarea{
-	resize:vertical;
-}
-.rush-code{
-	display:inline-block;
-	line-height: 1.2;
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+	height: auto;
 }
 
-// 输入框宽度样式
-.input-xs{
-	width:60px;
+// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
+select optgroup {
+	font-size: inherit;
+	font-style: inherit;
+	font-family: inherit;
 }
-.input-sm{
-	width:120px;	
+
+// Focus for select, file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+	// Default
+	outline: thin dotted;
+	// WebKit
+	outline: 1px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
-.input-lg{
-  width:180px;
-}
-.input-xl{
-  width:240px;
-}
-.input-group{
-	position: relative;
-	margin-bottom: 10px;
-	.label,.label-title{
-		position: absolute;
-		left: 1px;
-		top: 1px;			
-	}
-	.label{
-		width: 24px;
-		height: 24px;
-		padding:11px;
-		border-right: 1px solid colors(gray);
-		text-align: center;
-		background-color: colors(light);
-		color: colors(dark);
-		border-radius:radius(S) 0 0 radius(S);
-		[class^="ift-"]{
-			font-size: fonts(size) * 2.4;
-		}
-	}
-	.label-title{
-		font-size: fonts(size) * 1.4;
-		padding-left: 53px;
-		height: 46px;
-		line-height: 46px;
-		color: colors(dark);
-	}
-	.input{
-		width: 220px;
-		height: 38px;
-		padding:4px 4px 4px 53px;
-		border:1px solid colors(gray);
-		color: colors(primary);
-		border-radius:radius(S);
-		outline: none;
-		&:focus{
-			transition:.3s;
-			border-color: lighten(colors(primary),40%);
-			box-shadow:0 0 5px rgba(colors(primary),.3);
-		}
-	}
-	.input-short{
-		width: 80px;
-	}
-	.code{
-		line-height: 1;
-	}
-	.input:focus + .label-title{
-		display: none;
+
+// Fix for Chrome number input
+// Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
+// See https://github.com/twbs/bootstrap/issues/8350 for more.
+input[type="number"] {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		height: auto;
 	}
 }
 
-// 密码强度样式
-.pw-strength{
-	// width:210px;
-	height:16px;
-	margin-top:5px;
-	font-size: fonts(size) * 1.2;
-	background-color:colors(gray);
-	position:relative;
-	overflow:hidden;
-	.pw-letter{
-		position:absolute;
-		width: 100%;
-		left:0;
-		top:0;
-	}
-	span{
-		display: block;
-		float:left;
-		width:33.3%;
-		height:16px;      
-		line-height:16px;
-		text-align:center;      
-		color:colors(white);
-		border-right:1px solid colors(white);
-		box-sizing:border-box;
-	}
-	.pw-bar{
-		width:0;
-		height:16px;
-		overflow:hidden;			
-		transition:width 0.4s ease-in;
-	}
-	.pw-weak{
-		// width:70px;
-		width:33.33333%;
-		background-color:colors(red);
-	}
-	.pw-medium{
-		// width:140px;
-		width:66.66666%;
-		background-color:colors(orange);
-	}
-	.pw-strong{
-		// width:210px;
-		width:100%;
-		background-color:colors(green);
-	}
+// Adjust output element
+output {
+	vertical-align: middle;
 }
 
-// 表单样式
-.form-pop{
-	// position: fixed;
-	// top: 20%;
-	// left: 50%;
-	// z-index: 999;
-	display: none;
-	width: 320px;
+.#{$ns}form{
 	font-size: fonts(size) * 1.4;
-	background-color: colors(white);
-	border-radius:radius(M);
-	box-shadow:0 0 5px 0 rgba(colors(black),.2);
-	.close{
-		right: -16px;
-		top: -16px;
-		@extend %close;
-	}
-	&>.hd{
-		padding: 10px 20px;
-		border-bottom: 1px solid darken(colors(light),5%);
-		.title{
-			margin-right: 10px;
+	/* select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"], // `datetime` has been removed from WHATWG HTML https://github.com/whatwg/html/issues/336
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"], */
+	@at-root &-control{
+		display: block;
+		width: 100%;
+		padding: .5rem;
+		font-size: fonts(size) * 1.4;
+		color: colors(dark);
+		vertical-align: middle;
+		background-color: colors(white);
+		background-image: none;
+		border: 1px solid colors(gray);
+		-webkit-appearance: none;
+		transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		box-sizing: border-box;
+		// :focus 时的状态
+		&:focus,&.from-success{
+			outline: 0;
+			border-color:lighten(colors(primary), 10%);
+			box-shadow:0 2px 3px 0 lighten(colors(gray), 5%) inset, 0 0 5px 0 lighten(colors(primary), 20%);
+		}
+		&.from-warning {
+			outline: 0;
+			color: colors(orange);
+			border-color:lighten(colors(orange), 20%);
+			box-shadow:0 2px 3px 0 lighten(colors(gray), 5%) inset, 0 0 5px 0 lighten(colors(orange), 30%);
+		}
+		&.from-error {
+			outline: 0;
+			color: colors(red);
+			border-color:lighten(colors(red), 10%);
+			box-shadow:0 2px 3px 0 lighten(colors(gray), 5%) inset, 0 0 5px 0 lighten(colors(red), 20%);
+		}
+		
+		// placeholder样式
+		&::placeholder {
+			color: colors(gray);
+		}
+		&::-moz-placeholder {
+			opacity: 1;
+		}
+
+		// 禁用和只读属性
+		&[disabled],
+		&[readonly],
+		fieldset[disabled] & {
+			cursor: not-allowed;
+			background-color: lighten(colors(gray), 2%);
 		}
 	}
-	.tips{
+	textarea{
+		line-height: 1.5;
+	}
+}
+
+
+.#{$ns}form {
+	// Reset height for block field
+	textarea,
+	select[multiple],
+	select[size]{
+		height: auto;
+	}
+	select{
+		// via Foundation
+		-webkit-appearance: none !important;
+		-moz-appearance: none !important; // since Firefox 31 ?
+		-webkit-border-radius: 0;
+		padding-right:1.6em;
+		background: #fff url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSItNzQgNzkuNCAxNiAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtNzQgNzkuNCAxNiAyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNDQ0NDQ0M7fTwvc3R5bGU+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSItNjEuOCw4OC40IC02MS44LDg4LjQgLTY2LDkyLjYgLTcwLjIsODguNCAtNzAuMiw4OC40IC03MS4xLDg4LjQgLTcxLjEsODkuMyAtNjYsOTQuNCAtNjAuOSw4OS4zIC02MC45LDg4LjQgIi8+PC9zdmc+') no-repeat 100% center;
+		&[multiple="multiple"] {
+			background-image: none;
+		}
+	}
+}
+
+
+/**
+ * help text
+ */
+.#{$ns}form-help,.#{$ns}form-help-block{
+	color: colors(gray);
+	font-size: fonts(size) * 1.2;
+	line-height: 1.5;
+}
+.#{$ns}form-help-block {
+	display: block;
+	margin: 4px 0 8px;
+}
+
+/**
+ * form group
+ */
+.#{$ns}form-group {
+	margin-bottom: 1.6em;
+}
+
+/* Horizontal forms */
+.#{$ns}form-horizontal {
+	.#{$ns}control-label,
+	.#{$ns}radio,
+	.#{$ns}checkbox,
+	.#{$ns}radio-inline,
+	.#{$ns}checkbox-inline {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0.6em;
+		padding-right: 0.6em;
+	}
+	.#{$ns}radio-inline,
+	.#{$ns}checkbox-inline {
+		label{
+			margin-right: 1em;
+			// color: colors(dark);
+		}
+	}
+
+	.#{$ns}form-group {
+		@extend %clearfix;
+	}
+
+	// @include min-screen(641px) {
+		// & .#{$ns}control-label {
+		.#{$ns}control-label {
+			text-align: right;
+			color: colors(dark);
+		}
+	// }
+}
+
+/* Inline form elements */
+.#{$ns}form-inline {
+	.#{$ns}form-control {
+		display: inline-block;
+		width: auto;
 		vertical-align: middle;
-		line-height: 32px;
-		font-size: fonts(size) * 1.4;
-		color: colors(red);
 	}
-	&>.bd{
-		padding: 20px;
+
+	.#{$ns}control-label {
+		margin-bottom: 0;
+		vertical-align: middle;
 	}
+
+	// Remove default margin on radios/checkboxes that were used for stacking, and
+	// then undo the floating of radios and checkboxes to match (which also avoids
+	.#{$ns}radio,
+	.#{$ns}checkbox {
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		vertical-align: middle;
+	}
+
+	.#{$ns}radio input[type="radio"],
+	.#{$ns}checkbox input[type="checkbox"] {
+		float: none;
+		margin-left: 0;
+	}
+
 }

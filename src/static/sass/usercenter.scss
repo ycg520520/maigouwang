@@ -39,6 +39,7 @@
 	@at-root{
 		.aside-nav{
 			dt{
+				margin: 0 -1px;
 				height: 48px;
 				line-height: 48px;
 				color: colors(blue);
@@ -67,6 +68,12 @@
 				}
 			}
 		}
+	}
+}
+
+.uc-main{
+	&>.title{
+		font-weight: normal;
 	}
 }
 
@@ -308,5 +315,13 @@
 	}
 	.cell-9{
 		width: 90%;
+	}
+}
+
+
+// form 相关样式
+.form{
+	&>dt{
+		
 	}
 }

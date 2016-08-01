@@ -18,6 +18,16 @@
 			background-color:lighten(colors(blue),58%);
 			border-color:lighten(colors(blue),48%);
 			color: colors(darker);
-		}		
+		}
+		&-icon{
+			padding-left: 32px;
+			.ift-warn{
+				@include float;
+				margin-left: -24px;
+				line-height: 1.2;
+				color:colors(auxiliary);
+				font-size: fonts(size) * 2;
+			}
+		}
 	}
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<!--#include virtual="/app/public/head.html"-->
+	<!-- build:css ../static/css/base.css -->
+		<link rel="stylesheet" href="../../static/css/base.css">
+		<link rel="stylesheet" href="../../static/css/swiper.css">
+	<!-- endbuild -->
+	<!-- build:css ../static/css/usercenter.css -->
+		<link rel="stylesheet" href="../../static/css/order.css">
+	<!-- endbuild -->
+</head>
+<body>
+<!--#include virtual="/app/public/header.html"-->
+<div class="container">
+	<div class="row">
+		<div class="col-24">
+			<!-- 面包屑 -->
+			<div class="crumb"><em>首页</em> > <span>交易中心</span> > <strong>订单信息确认</strong></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-24">
+			<div class="order-main">
+				<h1 class="title tac">订单信息确认</h1>
+				<div class="tips tips-icon mb16">
+					<div class="bd"><i class="ift-warn"></i>对不起您还没有登录，请在此<a href="#" class="blue">登录</a>。如果你还没有账号请点击 <a href="#" class="green">注册</a></div>
+				</div>
+				<form action="" class="form form-horizontal">
+					<div class="form-group">
+						<label for="" class="control-label col-7">商家确认价格:</label>
+						<div class="col-15">
+							<div class="form-inline">
+								<input type="text" placeholder="3000" class="form-control from-warning">
+								<span class="form-help">请填写与商家确认后的价格 (包括物流运输费用) 以订单提交失败。</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					  <label for="" class="control-label col-7">收货人:</label>
+					  <div class="col-10">
+					  	<div class="form-inline">
+					  		<input type="text" placeholder="请填写收货人的真时姓名" class="form-control">
+					  	</div>
+					  </div>
+					</div>
+					<div class="flearfix">
+						<label for="" class="control-label col-7">地址:</label>
+						<div class="col-10">
+							<div class="form-inline mb8">
+								<select name="" id="" class="form-control">
+								  <option value="0">请选择省份</option>
+								</select>
+								<select name="" id="" class="form-control">
+								  <option value="0">请选择城市</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="text" placeholder="填写你的详细地址" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					  <label for="" class="control-label col-7">联系手机:</label>
+					  <div class="col-10">
+					  	<div class="form-inline">
+					  		<input type="text" placeholder="请填写真实手机号码" class="form-control">
+				  		</div>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label for="" class="control-label col-7">支付方式:</label>
+					  <div class="col-10">
+					  	<div class="form-inline">
+					  		<input type="text" placeholder="请填写正确的邮政编码" class="form-control">
+					  		<span class="form-help-block">买家付款后72小时内可取消订单；若买家付款超出72小时后取消订单则扣除该笔订单所付款的10%赔付给商家，剩余款项将按退款流程退回处理。</span>
+					  	</div>
+					  </div>
+					</div>
+
+					<div class="form-group col-offset-7">
+						<div class="checkbox-inline">
+							<label class="blue"><input type="checkbox">我同意交易及保障协议</label>
+						</div>
+					</div>
+					<div class="form-group col-offset-7">
+						<input type="submit" value="确认, 立即去支付" class="btn-xl btn-red">&nbsp;&nbsp;
+						<input type="reset" value="重新填写" class="btn-xl btn-gray">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--#include virtual="/app/public/footer.html"-->
+<!-- build:js ../static/js/uc-base.js -->
+<script type="text/javascript" src="../../static/js/plugins/jquery.js"></script>
+<script type="text/javascript" src="../../static/js/common.js"></script>
+<!-- endbuild -->
+<!-- build:js ../static/js/list.js -->
+<script type="text/javascript" src="../../static/js/usercenter.js"></script>
+<!-- endbuild -->
+<script>
+	G.equalLayout($('.conact-side'),$('.conact-main'));
+</script>
+</body>
+</html>
+    

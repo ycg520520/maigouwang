@@ -67,6 +67,7 @@
     .uc-aside .figcaption > .des {
       line-height: 1.5; }
   .aside-nav dt {
+    margin: 0 -1px;
     height: 48px;
     line-height: 48px;
     color: #1c9ef6;
@@ -89,6 +90,9 @@
       background-color: #fff; }
       .aside-nav .item.active a {
         color: #ff6600; }
+
+.uc-main > .title {
+  font-weight: normal; }
 
 .order-container {
   margin: 16px 0;

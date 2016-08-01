@@ -60,7 +60,6 @@
   text-align: justify;
   text-justify: inter-ideograph;
   border-radius: 3px;
-  color: #ff6600;
   background-color: #fffcfa;
   overflow: hidden; }
   .tips strong, .tips-close strong {
@@ -94,9 +93,9 @@
     opacity: .65;
     box-shadow: none; }
 
-.row, .clear, .clearfix, .list-thumbnail > .item, .col2, .tags, .comments-list .item > .hd, .ensure {
+.row, .clear, .clearfix, .list-thumbnail > .item, .col2, .tags, .comments-list .item > .hd, .form-horizontal .form-group, .ensure {
   zoom: 1; }
-  .row:before, .clear:before, .clearfix:before, .list-thumbnail > .item:before, .col2:before, .tags:before, .comments-list .item > .hd:before, .ensure:before, .row:after, .clear:after, .clearfix:after, .list-thumbnail > .item:after, .col2:after, .tags:after, .comments-list .item > .hd:after, .ensure:after {
+  .row:before, .clear:before, .clearfix:before, .list-thumbnail > .item:before, .col2:before, .tags:before, .comments-list .item > .hd:before, .form-horizontal .form-group:before, .ensure:before, .row:after, .clear:after, .clearfix:after, .list-thumbnail > .item:after, .col2:after, .tags:after, .comments-list .item > .hd:after, .form-horizontal .form-group:after, .ensure:after {
     content: "";
     display: table;
     clear: both; }
@@ -244,6 +243,9 @@
 
 .ift-select:before {
   content: "\e62a"; }
+
+.ift-warn:before {
+  content: "\e62b"; }
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -906,6 +908,9 @@ li {
 .cursor {
   cursor: pointer; }
 
+.radius {
+  border-radius: 1000px; }
+
 .pt8 {
   padding-top: 8px; }
 
@@ -941,9 +946,6 @@ li {
 
 .mb24 {
   margin-bottom: 24px; }
-
-.ad img {
-  width: 100%; }
 
 .btn {
   padding: 0 10px;
@@ -1636,7 +1638,7 @@ li {
   .crumb em, .crumb strong, .crumb span, .crumb a {
     font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
     font-weight: normal; }
-  .crumb em {
+  .crumb em, .crumb span {
     color: #999;
     font-style: normal; }
   .crumb strong {
@@ -1824,6 +1826,16 @@ li {
   background-color: white;
   border-color: white;
   color: #333; }
+
+.tips-icon {
+  padding-left: 32px; }
+  .tips-icon .ift-warn {
+    display: inline;
+    float: left;
+    margin-left: -24px;
+    line-height: 1.2;
+    color: #ff6600;
+    font-size: 20px; }
 
 .tags > .item {
   display: inline;
@@ -2108,10 +2120,196 @@ li {
 .table-alternate tbody tr.odd, .table-alternate tbody tr:nth-child(2n-1) {
   background-color: #fff; }
 
+/**
+ * 重设form基础设置
+ */
+fieldset {
+  border: none; }
+
+legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: inherit;
+  color: #999;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem; }
+
+label {
+  display: inline-block;
+  margin-bottom: 4px;
+  cursor: pointer; }
+
+input[type="search"] {
+  box-sizing: border-box; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  /* margin: 4px 0 0;
+	margin-top: 1px \9; // IE8-9
+	line-height: normal; */
+  margin: -2px 3px 0 0;
+  vertical-align: -2px;
+  cursor: pointer;
+  *margin: -1px 0 0 0;
+  overflow: hidden; }
+
+select[multiple],
+select[size] {
+  height: auto; }
+
+select optgroup {
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit; }
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 1px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  height: auto; }
+
+output {
+  vertical-align: middle; }
+
+.form {
+  font-size: 14px;
+  /* select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"], // `datetime` has been removed from WHATWG HTML https://github.com/whatwg/html/issues/336
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"], */ }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    font-size: 14px;
+    color: #999;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-sizing: border-box; }
+    .form-control:focus, .form-control.from-success {
+      outline: 0;
+      border-color: #83da82;
+      box-shadow: 0 2px 3px 0 #eaeaea inset, 0 0 5px 0 #aae6a9; }
+    .form-control.from-warning {
+      outline: 0;
+      color: #ff6600;
+      border-color: #ffa366;
+      box-shadow: 0 2px 3px 0 #eaeaea inset, 0 0 5px 0 #ffc299; }
+    .form-control.from-error {
+      outline: 0;
+      color: #fd5158;
+      border-color: #fe8388;
+      box-shadow: 0 2px 3px 0 #eaeaea inset, 0 0 5px 0 #feb6b9; }
+    .form-control::placeholder {
+      color: #ddd; }
+    .form-control::-moz-placeholder {
+      opacity: 1; }
+    .form-control[disabled], .form-control[readonly],
+    fieldset[disabled] .form-control {
+      cursor: not-allowed;
+      background-color: #e2e2e2; }
+  .form textarea {
+    line-height: 1.5; }
+
+.form textarea,
+.form select[multiple],
+.form select[size] {
+  height: auto; }
+
+.form select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-border-radius: 0;
+  padding-right: 1.6em;
+  background: #fff url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSItNzQgNzkuNCAxNiAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtNzQgNzkuNCAxNiAyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNDQ0NDQ0M7fTwvc3R5bGU+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSItNjEuOCw4OC40IC02MS44LDg4LjQgLTY2LDkyLjYgLTcwLjIsODguNCAtNzAuMiw4OC40IC03MS4xLDg4LjQgLTcxLjEsODkuMyAtNjYsOTQuNCAtNjAuOSw4OS4zIC02MC45LDg4LjQgIi8+PC9zdmc+") no-repeat 100% center; }
+  .form select[multiple="multiple"] {
+    background-image: none; }
+
+/**
+ * help text
+ */
+.form-help, .form-help-block {
+  color: #ddd;
+  font-size: 12px;
+  line-height: 1.5; }
+
+.form-help-block {
+  display: block;
+  margin: 4px 0 8px; }
+
+/**
+ * form group
+ */
+.form-group {
+  margin-bottom: 1.6em; }
+
+/* Horizontal forms */
+.form-horizontal .control-label,
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.6em;
+  padding-right: 0.6em; }
+
+.form-horizontal .radio-inline label,
+.form-horizontal .checkbox-inline label {
+  margin-right: 1em; }
+
+.form-horizontal .control-label {
+  text-align: right;
+  color: #999; }
+
+/* Inline form elements */
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle; }
+
+.form-inline .control-label {
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.form-inline .radio,
+.form-inline .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  vertical-align: middle; }
+
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0; }
+
 /* 
 @import "model/site-nav"; // 站点导航
 @import "model/nav"; // 导航
-@import "model/form"; // 注册登录
 @import "model/validform"; // 注册登录
 @import "model/scroller"; // 模拟滚动
 */

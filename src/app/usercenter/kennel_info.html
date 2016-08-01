@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<!--#include virtual="/app/public/head.html"-->
+	<!-- build:css ../static/css/base.css -->
+		<link rel="stylesheet" href="../../static/css/base.css">
+		<link rel="stylesheet" href="../../static/css/swiper.css">
+	<!-- endbuild -->
+	<!-- build:css ../static/css/usercenter.css -->
+		<link rel="stylesheet" href="../../static/css/usercenter.css">
+	<!-- endbuild -->
+</head>
+<body>
+<!--#include virtual="/app/public/header.html"-->
+<div class="container">
+	<div class="row">
+		<div class="col-24">
+			<!-- 面包屑 -->
+			<div class="crumb"><em>首页</em> > <a href="#">用户中心</a> > <strong>发布我的犬舍信息</strong></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-5">
+			<!--#include virtual="/app/public/uc_nav.html"-->
+		</div>
+		<div class="col-18 col-offset-1">
+			<div class="uc-main">
+				<h1 class="title tac">发布我的犬舍信息</h1>
+				<div class="tips tips-icon mb16">
+					<div class="bd"><i class="ift-warn"></i>第一次在本站卖狗，需要您填写您的犬舍信息</div>
+				</div>
+				<form action="" class="form form-horizontal">
+					<div class="form-group">
+					  <label for="" class="control-label col-4">犬舍名称:</label>
+					  <div class="col-16">
+					  	<input type="text" placeholder="个人用户请填写“XXX的狗窝”，企业用户请填写“XX犬舍或繁殖基地”" class="form-control">
+					  </div>
+					</div>
+					<div>
+						<label for="" class="control-label col-4">犬舍地址:</label>
+						<div class="col-16">
+							<div class="form-inline mb8">
+								<select name="" id="" class="form-control">
+								  <option value="0">请选择省份</option>
+								</select>
+								<select name="" id="" class="form-control">
+								  <option value="0">请选择城市</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="text" placeholder="填写你的详细地址" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-4">联系方式:</label>
+						<div class="col-16"><input type="text" placeholder="请输入您的手机号码" class="form-control"></div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-4">保障服务:</label>
+						<div class="col-16">
+							<div class="checkbox-inline">
+								<label>
+								<input type="checkbox">如实描述</label>
+								<label>
+								<input type="checkbox">纯种保证</label>
+								<label>
+								<input type="checkbox">30天包活</label>
+								<label>
+								<input type="checkbox">视频看狗</label>
+								<label>
+								<input type="checkbox">健康保证</label>
+								<label>
+								<input type="checkbox">疫苗齐全</label>
+								<label>
+								<input type="checkbox">芯片识别</label>
+								<label>
+								<input type="checkbox">养狗指导</label>
+								<label>
+								<input type="checkbox">签订合同</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-4">认证资料:</label>
+						<div class="col-16">
+							<label class="btn-lg btn-blue">
+							  <input type="file" class="hide">点击选择图片
+							</label><p class="form-help-block">图片宽度和高度比为3:2</p></div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-4">犬舍简介:</label>
+						<div class="col-16">
+							<textarea name="" cols="30" rows="10" placeholder="请填写狗狗介绍信息，并上传狗狗各角度的照片，如正面照，侧面照，背面照等等，如果能上传狗狗视频则效果更好。注意不得套用其他狗狗的信息，否则买家投诉货不对板的话您将被强制退款（同一窝狗并且外观看不出明显区别的，可以使用相同信息）" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="form-group col-offset-4">
+						<input type="submit" value="立即发布" class="btn-xl btn-red">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--#include virtual="/app/public/footer.html"-->
+<!-- build:js ../static/js/uc-base.js -->
+<script type="text/javascript" src="../../static/js/plugins/jquery.js"></script>
+<script type="text/javascript" src="../../static/js/common.js"></script>
+<!-- endbuild -->
+<!-- build:js ../static/js/list.js -->
+<script type="text/javascript" src="../../static/js/usercenter.js"></script>
+<!-- endbuild -->
+<script>
+	G.equalLayout($('.conact-side'),$('.conact-main'));
+</script>
+</body>
+</html>
+    

@@ -46,6 +46,7 @@
 
 .clear,.clearfix{@extend %clearfix;}
 .cursor{cursor:pointer;}
+.radius{border-radius:radius(rounded);}
 //其它
 .pt8{padding-top: 8px;}
 .pb8{padding-bottom: 8px;}
@@ -59,10 +60,3 @@
 .mb8{margin-bottom: 8px;}
 .mb16{margin-bottom: 16px;}
 .mb24{margin-bottom: 24px;}
-
-.ad{
-	img{
-		width: 100%;
-		
-	}
-}
