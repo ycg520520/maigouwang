@@ -4,3 +4,31 @@
 		font-weight: normal;
 	}
 }
+
+// 支付方式
+.payment-list{
+	&>.item{
+		width:120px;
+		height: 40px;
+		padding:1px;
+		margin-right: 8px;
+		border: 1px solid colors(gray);
+		input{display:none;}
+		&.active{
+			position: relative;
+			padding: 0;
+			border: 2px solid colors(auxiliary);
+			.ift-select{
+				position: absolute;
+				bottom: -1px;
+				right: -1px;
+				display: block;
+				color: colors(auxiliary);
+			}
+		}
+		.ift-select{
+			display: none;
+			line-height: 1;
+		}
+	}
+}

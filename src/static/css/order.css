@@ -31,4 +31,26 @@
 .order-main > .title {
   font-weight: normal; }
 
+.payment-list > .item {
+  width: 120px;
+  height: 40px;
+  padding: 1px;
+  margin-right: 8px;
+  border: 1px solid #ddd; }
+  .payment-list > .item input {
+    display: none; }
+  .payment-list > .item.active {
+    position: relative;
+    padding: 0;
+    border: 2px solid #ff6600; }
+    .payment-list > .item.active .ift-select {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      display: block;
+      color: #ff6600; }
+  .payment-list > .item .ift-select {
+    display: none;
+    line-height: 1; }
+
 /*# sourceMappingURL=order.css.map */

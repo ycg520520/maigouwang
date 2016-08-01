@@ -72,16 +72,17 @@
 					<div class="form-group">
 					  <label for="" class="control-label col-7">支付方式:</label>
 					  <div class="col-10">
-					  	<div class="form-inline">
-					  		<input type="text" placeholder="请填写正确的邮政编码" class="form-control">
-					  		<span class="form-help-block">买家付款后72小时内可取消订单；若买家付款超出72小时后取消订单则扣除该笔订单所付款的10%赔付给商家，剩余款项将按退款流程退回处理。</span>
+					  	<div class="payment-list">
+					  		<label class="item active"><input type="radio" class="radio" name="payment" checked="true"><img src="images/bank/alipay.png" alt="支付宝"><i class="ift-select"></i></label>
+					  		<label class="item"><input type="radio" class="radio" name="payment"><img src="images/bank/weixin_pay.png" alt="微信支付"><i class="ift-select"></i></label>
 					  	</div>
+				  		<span class="form-help-block">买家付款后72小时内可取消订单；若买家付款超出72小时后取消订单则扣除该笔订单所付款的10%赔付给商家，剩余款项将按退款流程退回处理。</span>
 					  </div>
 					</div>
 
 					<div class="form-group col-offset-7">
 						<div class="checkbox-inline">
-							<label class="blue"><input type="checkbox">我同意交易及保障协议</label>
+							<label class="blue"><input type="checkbox" checked="true">我同意交易及保障协议</label>
 						</div>
 					</div>
 					<div class="form-group col-offset-7">
@@ -99,11 +100,8 @@
 <script type="text/javascript" src="../../static/js/common.js"></script>
 <!-- endbuild -->
 <!-- build:js ../static/js/list.js -->
-<script type="text/javascript" src="../../static/js/usercenter.js"></script>
+<script type="text/javascript" src="../../static/js/order.js"></script>
 <!-- endbuild -->
-<script>
-	G.equalLayout($('.conact-side'),$('.conact-main'));
-</script>
 </body>
 </html>
     
