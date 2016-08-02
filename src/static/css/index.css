@@ -99,6 +99,8 @@
         width: 100%;
         height: 100%;
         background: no-repeat center center; }
+    .floor .main .item a {
+      color: #fff; }
     .floor .main .item .info {
       position: absolute;
       left: 0;

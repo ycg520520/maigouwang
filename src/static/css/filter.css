@@ -52,6 +52,8 @@
     border-top: 1px solid #e5e5e5; }
   .filter .attr-row {
     border-bottom: 1px solid #f1f1f1; }
+    .filter .attr-row .btn {
+      border-radius: 0; }
   .filter .attr-key {
     display: inline;
     float: left;

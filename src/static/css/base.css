@@ -34,7 +34,7 @@
  * @param $color
  * @param $opacity
  */
-.browser .close, .tips-close .J_close {
+.browser .close, .tips-close .J_close, .threepart-sigin .close {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -47,7 +47,7 @@
   cursor: pointer;
   border-radius: 50%;
   transition: .3s ease-in; }
-  .browser .close:hover, .tips-close .J_close:hover {
+  .browser .close:hover, .tips-close .J_close:hover, .threepart-sigin .close:hover {
     transform: rotate(360deg);
     background-color: #ff6600; }
 
@@ -1134,7 +1134,10 @@ li {
     background-color: #fff;
     padding: 0 72px 0 0;
     border: 2px solid #5ccf5a;
-    border-radius: 3px; }
+    border-radius: 3px;
+    /* &:hover .alike{
+			display:block;
+		} */ }
     .search > .bd .input {
       width: 100%;
       height: 32px;
@@ -1169,8 +1172,6 @@ li {
       left: 0;
       padding: 8px;
       cursor: pointer; }
-    .search > .bd:hover .alike {
-      display: block; }
   .alike {
     display: none;
     position: absolute;
@@ -2417,5 +2418,43 @@ output {
     padding: 6px 4px;
     line-height: 14px;
     border-radius: 50%; }
+
+.threepart-sigin {
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff; }
+  .threepart-sigin > .hd {
+    height: 48px;
+    padding: 0 24px 0 16px;
+    line-height: 48px;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd; }
+  .threepart-sigin > .bd {
+    padding: 16px; }
+    .threepart-sigin > .bd li {
+      display: inline;
+      float: left;
+      width: 33.33333%;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5; }
+    .threepart-sigin > .bd [class*="ift"] {
+      display: block;
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      margin: 4px auto;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 32px; }
+    .threepart-sigin > .bd .ift-qq {
+      background-color: #4db3f8; }
+    .threepart-sigin > .bd .ift-weixin {
+      background-color: #83da82; }
+    .threepart-sigin > .bd .ift-sina {
+      background-color: #fe8388; }
+  .threepart-sigin .close {
+    right: -16px;
+    top: -16px; }
 
 /*# sourceMappingURL=base.css.map */

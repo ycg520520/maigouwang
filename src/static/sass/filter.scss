@@ -15,6 +15,9 @@
 	.attr-row{
 		@extend %clearfix;
 		border-bottom:1px solid lighten(colors(gray),8%);
+		.btn{
+			border-radius: 0;
+		}
 	}
 	.attr-key{
 		@include float;
