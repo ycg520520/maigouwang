@@ -6,4 +6,4 @@
 .git
 .sass-cache
 node_modules/*
-dest/*
+# dest/*

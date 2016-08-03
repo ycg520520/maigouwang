@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<!--#include virtual="/app/public/head.html"-->
-	<link rel="stylesheet" href="../static/css/base-4551ec37c8.css">
-	<link rel="stylesheet" href="../static/css/filter-83fe331879.css">
+	<link rel="stylesheet" href="../static/css/base-c50b782d76.css">
+	<link rel="stylesheet" href="../static/css/filter-0a13a81d30.css">
 </head>
 <body>
 <!--#include virtual="/app/public/header.html"-->
@@ -32,21 +32,7 @@
 							<div class="bd">
 								<div class="attr-val-list tabs-item">
 									<a href="#" class="active">全部</a>
-									<a href="#">泰迪</a>
-									<a href="#">贵宾</a>
-									<a href="#">哈奇士</a>
-									<a href="#">博美</a>
-									<a href="#">吉娃娃</a>
-									<a href="#">萨摩耶</a>
-									<a href="#">松狮</a>
-									<a href="#">金毛</a>
-									<a href="#">比熊</a>
-									<a href="#">阿拉加斯</a>
-									<a href="#">拉布拉多</a>
-								</div>
-								<div class="attr-val-list tabs-item hide">
-									<a href="#" class="active"> class="active"全部</a>
-									<a href="#">泰迪</a>
+									<a href="#">1泰迪</a>
 									<a href="#">贵宾</a>
 									<a href="#">哈奇士</a>
 									<a href="#">博美</a>
@@ -60,7 +46,7 @@
 								</div>
 								<div class="attr-val-list tabs-item hide">
 									<a href="#" class="active">全部</a>
-									<a href="#">泰迪</a>
+									<a href="#">2泰迪</a>
 									<a href="#">贵宾</a>
 									<a href="#">哈奇士</a>
 									<a href="#">博美</a>
@@ -74,7 +60,21 @@
 								</div>
 								<div class="attr-val-list tabs-item hide">
 									<a href="#" class="active">全部</a>
-									<a href="#">泰迪</a>
+									<a href="#">3泰迪</a>
+									<a href="#">贵宾</a>
+									<a href="#">哈奇士</a>
+									<a href="#">博美</a>
+									<a href="#">吉娃娃</a>
+									<a href="#">萨摩耶</a>
+									<a href="#">松狮</a>
+									<a href="#">金毛</a>
+									<a href="#">比熊</a>
+									<a href="#">阿拉加斯</a>
+									<a href="#">拉布拉多</a>
+								</div>
+								<div class="attr-val-list tabs-item hide">
+									<a href="#" class="active">全部</a>
+									<a href="#">4泰迪</a>
 									<a href="#">贵宾</a>
 									<a href="#">哈奇士</a>
 									<a href="#">博美</a>
@@ -103,10 +103,10 @@
 							<a href="#">10001-50000元</a>
 						</div>
 						<div class="price-interval fl">
-							<input type="text" placeholder="0元">
+							<input type="text" placeholder="0元" id="min_price">
 							-
-							<input type="text" placeholder="0元">
-							<input type="submit" value="确定" class="btn">
+							<input type="text" placeholder="0元" id="max_price">
+							<input type="submit" value="确定" class="btn" id="submit_price">
 						</div>
 					</dd>
 				</dl>
@@ -169,10 +169,10 @@
 					<dd class="attr-val">
 						<div class="condition fl">
 						暂无筛选条件
-						<a href="#">犬种:<strong>萨摩耶</strong><i class="ift-close"></i></a>
-						<a href="#">犬种:<strong>萨摩耶</strong><i class="ift-close"></i></a>
+						<!-- <a href="#">犬种:<strong>萨摩耶</strong><i class="ift-close"></i></a>
+						<a href="#">犬种:<strong>萨摩耶</strong><i class="ift-close"></i></a> -->
 						</div>
-						<a href="#"><i class="ift-del"></i>清空筛选</a>
+						<span class="cursor" id="J_clearFilter"><i class="ift-del"></i>清空筛选</span>
 					</dd>
 				</dl>
 			</div>
@@ -400,45 +400,45 @@
 		<div class="hd"><h2 class="title">狗狗美图</h2></div>
 		<ul class="bd">
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/1.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/1.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/2.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/2.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/3.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/3.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/4.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/4.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/5.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/5.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#"><a href="">高清狗狗壁纸桌面</a></a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/6.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/6.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 			<li class="item">
-				<div class="thumbnail"><img src="images/space.gif" data-src="images/beautiful/7.jpg" alt=""></div>
+				<div class="thumbnail"><a href="#"><img src="images/space.gif" data-src="images/beautiful/7.jpg" alt=""></a></div>
 				<div class="info">
-					<h3 class="title">高清狗狗壁纸桌面</h3>
+					<h3 class="title"><a href="#">高清狗狗壁纸桌面</a></h3>
 				</div>
 			</li>
 		</ul>
@@ -446,8 +446,8 @@
 	<!-- 狗狗美图 结束 -->
 </div>
 <!--#include virtual="/app/public/footer.html"-->
-<script src="../static/js/base-21342befe1.js"></script>
-<script src="../static/js/filter-5c8bdcefee.js"></script>
+<script src="../static/js/base-5f1c300a46.js"></script>
+<script src="../static/js/filter-29e15de989.js"></script>
 </body>
 </html>
     
