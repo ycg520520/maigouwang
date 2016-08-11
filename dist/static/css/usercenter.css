@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架,在运用时请注意是否安装sass
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 字体的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 圆角的key值
+ */
+/**
+ * 媒体查询相关mixin
+ */
+/**
+ * 解决IE9以下不支持rgba，下面是rgba的替代
+ * @param $color
+ * @param $opacity
+ */
+.fav-list .item {
+  zoom: 1; }
+  .fav-list .item:before, .fav-list .item:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.uc-aside {
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+  background-color: #fcfcfc; }
+  .uc-aside > .hd {
+    height: 72px;
+    padding: 16px;
+    font-size: 12px; }
+  .uc-aside .thumbnail {
+    display: inline;
+    float: left;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    overflow: hidden; }
+  .uc-aside .figcaption {
+    margin-left: 80px;
+    padding-top: 16px; }
+    .uc-aside .figcaption > .title {
+      font-size: 16px;
+      line-height: 24px;
+      height: 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 4px;
+      font-weight: normal; }
+    .uc-aside .figcaption > .des {
+      line-height: 1.5; }
+  .aside-nav dt {
+    margin: 0 -1px;
+    height: 48px;
+    line-height: 48px;
+    color: #1c9ef6;
+    font-size: 16px;
+    background-color: #c8e7fd; }
+  .aside-nav dt, .aside-nav .item {
+    padding: 0 16px; }
+  .aside-nav .item {
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid #f1f1f1;
+    border-width: 1px 0;
+    margin-bottom: -1px;
+    line-height: 40px; }
+    .aside-nav .item.active {
+      position: relative;
+      z-index: 1;
+      color: #ff6600;
+      margin-right: -1px;
+      background-color: #fff; }
+      .aside-nav .item.active a {
+        color: #ff6600; }
+
+.uc-main > .title {
+  font-weight: normal; }
+
+.order-container {
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid #f7f7f7;
+  transition: .3s ease-in-out; }
+  .order-container:hover {
+    border-color: #c4c4c4; }
+  .order-container:nth-child(2n-1) {
+    border: 1px solid #e0f2fe; }
+    .order-container:nth-child(2n-1):hover {
+      border-color: #7ec8fa; }
+    .order-container:nth-child(2n-1) thead {
+      background-color: #e0f2fe; }
+    .order-container:nth-child(2n-1) .table, .order-container:nth-child(2n-1) th, .order-container:nth-child(2n-1) td {
+      border-color: #e0f2fe; }
+  .order-container strong {
+    font-weight: normal;
+    color: #999; }
+  .order-container thead th, .order-container thead td {
+    border: 0; }
+  .order-container thead th, .order-container thead strong {
+    font-weight: normal; }
+  .order-container thead .time {
+    margin-right: 24px; }
+  .order-container thead .address {
+    display: block;
+    white-space: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .order-container .table, .order-container th, .order-container td {
+    vertical-align: top; }
+  .order-container .table {
+    border: 0; }
+  .order-container tbody .thumbnail {
+    display: inline;
+    float: left;
+    width: 168px;
+    height: 112px; }
+    .order-container tbody .thumbnail img {
+      width: 100%; }
+  .order-container tbody .info {
+    margin-left: 176px; }
+  .order-container tbody .des {
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+    margin: 4px 0; }
+  .order-container tbody .time {
+    font-size: 12px;
+    height: 40px;
+    line-height: 20px; }
+
+.fav-tools {
+  padding-top: 16px;
+  display: inline;
+  float: right;
+  text-align: right;
+  color: #999;
+  font-size: 14px; }
+  .fav-tools-list {
+    display: none; }
+    .fav-tools-list > .item {
+      display: inline-block;
+      margin-left: 8px; }
+
+.fav-list {
+  margin: 16px auto 32px;
+  font-size: 14px;
+  line-height: 32px; }
+  .fav-list > .hd {
+    border: 1px solid #f1f1f1; }
+    .fav-list > .hd .cell {
+      border: 1px solid #f1f1f1;
+      border-width: 1px 1px 0 0;
+      text-align: center; }
+    .fav-list > .hd .item {
+      background-color: #fcfcfc; }
+      .fav-list > .hd .item:first-child .cell {
+        border-top-width: 0; }
+      .fav-list > .hd .item.first-child .cell, .fav-list > .hd .item.first .cell {
+        border-top-width: 0; }
+  .fav-list > .bd .item {
+    margin-top: 1px; }
+    .fav-list > .bd .item:nth-child(1n) {
+      background-color: #fff; }
+    .fav-list > .bd .item.nth-1n {
+      background-color: #fff; }
+    .fav-list > .bd .item:nth-child(2n) {
+      background-color: #fcfcfc; }
+    .fav-list > .bd .item.nth-2n {
+      background-color: #fcfcfc; }
+  .fav-list.editor-item .item .opt {
+    display: block;
+    z-index: 2;
+    display: block; }
+  .fav-list .item {
+    position: relative; }
+    .fav-list .item:hover .opt {
+      border-color: #c4c4c4; }
+    .fav-list .item.active .opt {
+      border-color: #ff6600;
+      background-color: rgba(0, 0, 0, 0.05); }
+      .fav-list .item.active .opt .ift-select {
+        color: #ff6600; }
+      .fav-list .item.active .opt .ift-del {
+        background-color: #ff6600; }
+  .fav-list .opt {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    border: 1px solid #ddd;
+    background-color: rgba(0, 0, 0, 0.05); }
+    .fav-list .opt [class*="ift-"] {
+      position: absolute;
+      right: 0;
+      line-height: 1;
+      font-size: 16px;
+      cursor: pointer; }
+    .fav-list .opt .ift-del {
+      padding: 2px 2px 3px;
+      font-size: 14px;
+      background-color: #fff;
+      color: #fff;
+      background-color: #ddd; }
+    .fav-list .opt .ift-select {
+      color: #ddd;
+      bottom: 0; }
+  .fav-list .cell {
+    width: 100%;
+    display: inline;
+    float: left;
+    height: 48px;
+    padding: 8px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+    .fav-list .cell:last-child {
+      border-right-width: 0; }
+    .fav-list .cell.last-child, .fav-list .cell.last {
+      border-right-width: 0; }
+  .fav-list .cell-1 {
+    width: 10%; }
+  .fav-list .cell-2 {
+    width: 20%; }
+  .fav-list .cell-3 {
+    width: 30%; }
+  .fav-list .cell-4 {
+    width: 40%; }
+  .fav-list .cell-5 {
+    width: 50%; }
+  .fav-list .cell-6 {
+    width: 60%; }
+  .fav-list .cell-6 {
+    width: 60%; }
+  .fav-list .cell-7 {
+    width: 70%; }
+  .fav-list .cell-8 {
+    width: 80%; }
+  .fav-list .cell-9 {
+    width: 90%; }
+
+/*# sourceMappingURL=usercenter.css.map */

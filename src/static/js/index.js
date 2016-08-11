@@ -1,4 +1,10 @@
-var swiper = new Swiper('.swiper-container', {
+'use strict';
+require('./plugins/jquery');
+require('./plugins/swiper');
+require('./plugins/layer/layer');
+require('./models/common');
+
+new Swiper('.swiper-container', {
   pagination: '.swiper-pagination',
   nextButton: '.ift-next',
   prevButton: '.ift-prev',

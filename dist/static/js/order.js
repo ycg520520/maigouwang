@@ -1,0 +1,2 @@
+webpackJsonp([5],[function(i,s,t){"use strict";t(1),$(".payment-list>.item").on("click",function(){$(this).addClass("active").siblings(".item").removeClass("active")})}]);
+//# sourceMappingURL=order.js.map

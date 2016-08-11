@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/**! 
+ * @author colpu
+ * @copyright mingfu network
+ * 本配置基于scss框架,在运用时请注意是否安装sass
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 字体的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 圆角的key值
+ */
+.attr-val-tabs > .hd > li.active:before, .attr-val-tabs > .hd > li.active:after {
+  content: "";
+  height: 0;
+  width: 0;
+  overflow: hidden; }
+
+/**
+ * 媒体查询相关mixin
+ */
+/**
+ * 解决IE9以下不支持rgba，下面是rgba的替代
+ * @param $color
+ * @param $opacity
+ */
+.filter .attr-row {
+  zoom: 1; }
+  .filter .attr-row:before, .filter .attr-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.filter {
+  border: 1px solid #e5e5e5; }
+  .filter > .bd, .filter > .ft {
+    padding: 0 16px; }
+    .filter > .bd .attr-row:last-child, .filter > .ft .attr-row:last-child {
+      border-bottom: 0; }
+  .filter > .ft {
+    background-color: #fcfcfc;
+    border-top: 1px solid #e5e5e5; }
+  .filter .attr-row {
+    border-bottom: 1px solid #f1f1f1; }
+    .filter .attr-row .btn {
+      border-radius: 0; }
+  .filter .attr-key {
+    display: inline;
+    float: left;
+    width: 80px;
+    padding: 4px 0;
+    height: 32px;
+    line-height: 31px;
+    text-align: right;
+    font-size: 14px;
+    color: #999; }
+  .filter .attr-val {
+    margin-left: 104px;
+    font-size: 12px;
+    min-height: 32px;
+    padding: 4px 0;
+    line-height: 32px; }
+    .filter .attr-val .ift-del {
+      vertical-align: middle;
+      color: #999;
+      margin-right: 2px;
+      font-size: 13px; }
+  .attr-val-tabs > .hd {
+    font-size: 14px;
+    height: 40px;
+    border: 0; }
+    .attr-val-tabs > .hd > li {
+      margin: 0 16px;
+      height: 40px;
+      line-height: 32px;
+      font-size: 14px; }
+      .attr-val-tabs > .hd > li.active {
+        position: relative; }
+        .attr-val-tabs > .hd > li.active:before, .attr-val-tabs > .hd > li.active:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -7px;
+          border-bottom: 7px solid #e5e5e5;
+          border-left: 7px dashed transparent;
+          border-right: 7px dashed transparent; }
+        .attr-val-tabs > .hd > li.active:after {
+          bottom: -1px;
+          border-bottom-color: #fcfcfc; }
+  .attr-val-tabs > .bd {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 8px;
+    margin-bottom: 12px;
+    background-color: #fcfcfc; }
+  .attr-val-list a {
+    margin-right: 8px; }
+    .attr-val-list a.active {
+      color: #ff6600; }
+  .price-interval, .attr-other-val {
+    color: #ddd;
+    padding: 4px 0;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 16px; }
+    .price-interval input[type="text"], .price-interval .btn, .attr-other-val input[type="text"], .attr-other-val .btn {
+      width: 48px;
+      height: 22px;
+      line-height: 22px;
+      border: 1px solid #ddd;
+      padding: 0 5px;
+      font-size: 12px;
+      color: #999;
+      vertical-align: top; }
+    .price-interval .btn, .attr-other-val .btn {
+      height: 24px;
+      background-color: #f1f1f1; }
+  .attr-select {
+    margin-right: 16px; }
+    .attr-select > select {
+      border: 1px solid #ddd;
+      height: 24px;
+      min-width: 96px;
+      color: #999; }
+  .attr-other-val {
+    margin-left: 0; }
+    .attr-other-val input {
+      display: inline;
+      float: left; }
+    .attr-other-val input[type="text"] {
+      width: 96px;
+      border-right: 0; }
+  .condition a {
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    line-height: 21px;
+    border: 1px solid #ddd;
+    padding: 0 30px 0 8px;
+    margin: 4px 8px 4px 0;
+    color: #999;
+    transition: .3s ease-in; }
+    .condition a strong {
+      color: #ff6600;
+      font-weight: normal;
+      margin-left: 4px; }
+    .condition a:hover {
+      border-color: #ff6600; }
+      .condition a:hover .ift-close {
+        background-color: #ff6600;
+        color: #fff; }
+  .condition .ift-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    transition: .3s ease-in; }
+    .condition .ift-close:before {
+      content: '\00d7'; }
+
+.hot-commend .swiper-pagination {
+  position: static; }
+
+.hot-commend .swiper-pagination-bullet {
+  background-color: #ddd; }
+
+.hot-commend .swiper-pagination-bullet-active {
+  background-color: #5ccf5a; }
+
+.class-synopsis .synopsis {
+  margin-bottom: 32px; }
+
+.class-synopsis .figure {
+  display: inline;
+  float: left;
+  width: 336px; }
+  .class-synopsis .figure img {
+    width: 100%; }
+
+.class-synopsis .con {
+  margin-left: 352px;
+  height: 232px;
+  overflow: hidden;
+  line-height: 1.5;
+  position: relative; }
+  .class-synopsis .con * {
+    font-size: 16px; }
+  .class-synopsis .con p {
+    margin-bottom: 8px;
+    text-indent: 2em;
+    font-size: 14px; }
+  .class-synopsis .con .swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-right: 16px;
+    box-sizing: border-box; }
+  .class-synopsis .con .swiper-slide, .class-synopsis .con .swiper-wrapper {
+    height: auto; }
+  .class-synopsis .con .swiper-scrollbar-drag {
+    cursor: pointer; }
+
+.class-synopsis .class-news dt {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px; }
+
+.class-synopsis .class-news .list {
+  display: inline;
+  float: left;
+  width: 22%;
+  padding-right: 2%;
+  margin-right: 2%;
+  border-right: 1px dotted #ddd;
+  margin-left: -1px; }
+  .class-synopsis .class-news .list:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none; }
+  .class-synopsis .class-news .list.last-child, .class-synopsis .class-news .list.last {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none; }
+
+/*# sourceMappingURL=filter.css.map */
